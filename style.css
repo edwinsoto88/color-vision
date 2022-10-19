@@ -249,45 +249,22 @@ p{
 /*----------Reaction Time Test ----------*/
 
 
-.reaction-test-container{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.open{
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.modal{
-  display: relative;
-  width: 80vh;
-  max-width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
 .clickable-area {
-  align-items: center;
-  display: flex;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   cursor: pointer;
   background: limegreen;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
   color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
-.end-screen,
-.main-menu {
-  display: flex;
-  position: absolute;
+.end-screen, .main-menu {
+  display: none;
+  position: fixed;
   height: 100vh;
   width: 100%;
   top: 0;
@@ -302,12 +279,12 @@ p{
 .end-screen.active {
   display: grid;
   place-items: center;
-  position: relative;
+
+
 }
 
 .main-menu {
   cursor: pointer;
-  position: absolute;
 }
 
 .container {
