@@ -11,7 +11,7 @@
 .header{
   min-height: 100vh;
   width: 100%;
-  background-image: url(assets/agif1opt.gif);
+  background-image: url(Screensaver.gif);
   background-position: center;
   background-size: cover;
   position: relative;
@@ -179,8 +179,8 @@ p{
 .sub-header{
   height: 50vh;
   width: 100%;
-  background: linear-
-  gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(ColorBlind.png);
+  background-image:
+    linear-gradient(rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(ColorBlind.jpg);
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -189,4 +189,161 @@ p{
 
 .sub-header h1{
   margin-top: 100px;
+}
+
+
+.tests{
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.test-col{
+  flex-basis: 32%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.test-col img{
+  width: 100%;
+  display: block;
+}
+
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.layer:hover{
+  background: rgba(226,0,0,0.7);
+}
+
+.layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: #fff;
+  font-size: 26px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+
+
+/*----------Reaction Time Test ----------*/
+
+
+.reaction-test-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.open{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal{
+  display: relative;
+  width: 80vh;
+  max-width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clickable-area {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  cursor: pointer;
+  background: limegreen;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.end-screen,
+.main-menu {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #0d3b66;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.main-menu.active,
+.end-screen.active {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.main-menu {
+  cursor: pointer;
+  position: absolute;
+}
+
+.container {
+  max-width: 700px;
+  padding: 0 32px;
+}
+
+.main-menu h1 {
+  font-size: 70px;
+  margin: 8px 0;
+}
+
+.container p {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 800;
+  margin: 0;
+}
+
+.end-screen h1 {
+  font-size: 30px;
+}
+
+.reaction-time-text {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+.end-screen .play-again-btn {
+  border: none;
+  background: #faf0ca;
+  font-size: 20px;
+  padding: 8px 32px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 4px;
+  cursor: pointer;
 }
