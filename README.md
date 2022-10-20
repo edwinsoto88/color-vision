@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/edwinsoto88/color-vision">
-    <img src="assets/New_Logo.png" alt="Logo" width="80" height="80">
+    <img src="assets/New Logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Color Vision</h3>
