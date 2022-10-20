@@ -45,9 +45,7 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -131,9 +129,10 @@ Distributed under the ___ License. See `LICENSE.txt` for more information.
 ## Contact
 
 Edwin Soto-Villela - [@edwinsoto88](https://www.linkedin.com/in/edwin-soto-villela/) - Edwin's LinkedIn
-Rohit Kumar Shaw - [@rks0134](https://www.linkedin.com/in/rohitkrshaw/) - Rohit's LinkedIn
-Janie Reyna - [@](https://www.linkedin.com/in/jreyna-csengineer/) - Janie's LinkedIn
 
+Rohit Kumar Shaw - [@rks0134](https://www.linkedin.com/in/rohitkrshaw/) - Rohit's LinkedIn
+
+Janie Reyna - [@](https://www.linkedin.com/in/jreyna-csengineer/) - Janie's LinkedIn
 
 Project Link: [https://github.com/edwinsoto88/color-vision](https://github.com/edwinsoto88/color-vision)
 
