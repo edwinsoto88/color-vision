@@ -31,6 +31,60 @@
             </ul>
         </div>
     </nav>
+
+    <h1>Match the colors</h1>
+    <div class="play-area">
+        <div class="computer-pane">
+            <div class="computer-circle">
+                <span class="color-to-match"></span>
+            </div>
+        </div>
+        <div class="controls">
+            <h2>Move the sliders</h2>
+            <span class="mobile-colorinfo">Red: 0, Green: 0, Blue: 0</span>
+            <div class="color-details">
+                <span class="btn-change decrement">-</span>
+                <span>Red: <span class="red-value color-value">0</span></span>
+                <span class="btn-change increment">+</span>
+            </div>
+            <div class="mobile-controls">
+                <span class="mobile-decrement decrement-mobile">-</span>
+                <input id="red" type="range" max="255" min="0" value="0" oninput="changeColor()">
+                <span class="mobile-decrement increment-mobile">+</span>
+            </div>
+            <div class="color-details">
+                <span class="btn-change decrement">-</span> <span>Green: <span
+                        class="green-value color-value">0</span></span>
+                <span class="btn-change increment">+</span>
+            </div>
+            <div class="mobile-controls">
+                <span class="mobile-decrement decrement-mobile">-</span>
+                <input id="green" type="range" max="255" min="0" value="0" oninput="changeColor()">
+                <span class="mobile-decrement increment-mobile">+</span>
+            </div>
+            <div class="color-details">
+                <span class="btn-change decrement">-</span> <span>Blue: <span class="blue-value color-value">0</span></span>
+                <span class="btn-change increment">+</span>
+            </div>
+            <div class="mobile-controls">
+                <span class="mobile-decrement decrement-mobile">-</span>
+                <input id="blue" type="range" max="255" min="0" value="0" oninput="changeColor()">
+                <span class="mobile-decrement increment-mobile">+</span>
+            </div>
+            <div class="game-buttons">
+                <button id="btn-match">Match</button>
+                <button id="btn-end-game">Cheat</button>
+                <button id="reset"><i class="fas fa-redo-alt"></i></button>
+    
+            </div>
+            <div class="score-text"></div>
+        </div>
+        <div class="user-pane">
+            <div class="user-circle">
+                <p>Match Me!</p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
