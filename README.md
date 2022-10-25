@@ -1,11 +1,11 @@
 # color-vision
+
 <a name="readme-top"></a>
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -25,8 +25,6 @@
     <a href="https://github.com/edwinsoto88/color-vision">View Demo</a>
   </p>
 </div>
-
-
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -52,9 +50,8 @@
   </ol>
 </details>
 
-
-
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -63,18 +60,15 @@ The goal of this project is to create a web application to test vision and check
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 ### Built With
-* [![HTML][]]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
+- [![HTML][]]
+- [![Bootstrap][bootstrap.com]][bootstrap-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
@@ -82,14 +76,15 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 List things you need to use the software and how to install them.
-* npm
+
+- npm
   ```sh
   npm install npm@latest -g
   ```
 
 ### Installation
 
-1. 
+1.
 2. Clone the repo
    ```sh
    git clone https://github.com/edwinsoto88/color-vision.git
@@ -98,34 +93,35 @@ List things you need to use the software and how to install them.
    ```sh
    npm install
    ```
-4. 
+4.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
-- [X] Feature 1: Home Page
-- [X] Feature 2: Login Page
-- [X] Feature 3: Registration Page
-- [X] Feature 4: Tests Page
-- [X] Feature 5: Cambridge Test
-- [X] Feature 6: Anomaliscope.html
+- [x] Feature 1: Home Page
+- [x] Feature 2: Login Page
+- [x] Feature 3: Registration Page
+- [x] Feature 4: Tests Page
+- [x] Feature 5: Cambridge Test
+- [x] Feature 6: Anomaliscope.html
 
 See the [open issues](https://github.com/edwinsoto88/color-vision/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
+
 ## License
 
-Distributed under the ___ License. See `LICENSE.txt` for more information.
+Distributed under the \_\_\_ License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Edwin Soto-Villela - [@edwinsoto88](https://www.linkedin.com/in/edwin-soto-villela/) - Edwin's LinkedIn
@@ -138,21 +134,19 @@ Project Link: [https://github.com/edwinsoto88/color-vision](https://github.com/e
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- ACKNOWLEDGMENTS -->
+
 ## Acknowledgments
 
-* []()
-* []()
-* []()
+- []()
+- []()
+- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/edwinsoto88/color-vision.svg?style=for-the-badge
 [contributors-url]: https://github.com/edwinsoto88/color-vision/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/edwinsoto88/color-vision.svg?style=for-the-badge
@@ -164,7 +158,7 @@ Project Link: [https://github.com/edwinsoto88/color-vision](https://github.com/e
 [license-shield]: https://img.shields.io/github/license/edwinsoto88/color-vision.svg?style=for-the-badge
 [license-url]: https://github.com/edwinsoto88/color-vision/blob/master/LICENSE.txt
 [product-screenshot]: images/screenshot.png
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[bootstrap-url]: https://getbootstrap.com
