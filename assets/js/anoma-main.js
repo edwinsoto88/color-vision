@@ -125,8 +125,8 @@ function calculateScore(userColor, PCColor) {
 
     calculateDifference(userColor, PCColor);
     let score = calculateDifference(userColor, PCColor);
-    if (score == 0) {
-      scoreText.innerHTML = "You Won!! Colors Match!";
+    if (score <= 40) {
+      scoreText.innerHTML = "Colors Match!";
     } else {
       scoreText.innerHTML = "You are off by " + score;
     }
@@ -155,7 +155,6 @@ endGame.addEventListener("click", function () {
 
 
 // Reset the game
-
 resetBtn.addEventListener("click", function () {
   location.reload();
 })
