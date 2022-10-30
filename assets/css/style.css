@@ -90,7 +90,7 @@ ul li ul:hover {
 
 }
 
-.textbox{
+.main-menu-textbox{
   position: absolute;
   width: 90%;
   color: white;
@@ -100,11 +100,11 @@ ul li ul:hover {
   text-align: center;
 }
 
-.textbox h1{
+.main-menu-textbox h1{
   font-size: 62px;
 }
 
-.textbox p{
+.main-menu-textbox p{
   margin: 10px 0 40px;
   font-size: 14px;
   color: white;
