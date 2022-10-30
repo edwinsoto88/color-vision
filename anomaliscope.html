@@ -14,7 +14,7 @@
 
 <body>
     <nav>
-        <a href="index.html"> <img src="assets/images/Logo.png"></a>
+        <a href="index.html"> <img src="assets/images/Logo.png" alt="colorvision logo"></a>
         <div class="navlinks">
             <ul>
                 <li><a href=""><i class="fa fa-fw fa-home"></i>Home</a></li>
@@ -43,32 +43,35 @@
             <span class="mobile-colorinfo">Red: 0, Green: 0, Blue: 0</span>
             <div class="color-details">
                 <span class="btn-change decrement">-</span>
-                <span>Red: <span class="red-value color-value">0</span></span>
+                <span><span class="red-value color-value">0</span></span>
                 <span class="btn-change increment">+</span>
             </div>
             <div class="mobile-controls">
                 <span class="mobile-decrement decrement-mobile">-</span>
+                <label for="red">Red</label>
                 <input id="red" type="range" max="255" min="0" value="0" oninput="changeColor()">
                 <span class="mobile-decrement increment-mobile">+</span>
             </div>
             <div class="color-details">
-                <span class="btn-change decrement">-</span> <span>Green: <span
-                        class="green-value color-value">0</span></span>
+                <span class="btn-change decrement">-</span> 
+                <span><span class="green-value color-value">0</span></span>
                 <span class="btn-change increment">+</span>
             </div>
             <div class="mobile-controls">
                 <span class="mobile-decrement decrement-mobile">-</span>
-                <input id="green" type="range" max="255" min="0" value="0" oninput="changeColor()">
+                <label for="green">Green</label>
+                <input id="green" name="green" type="range" max="255" min="0" value="0" oninput="changeColor()">
                 <span class="mobile-decrement increment-mobile">+</span>
             </div>
             <div class="color-details">
-                <span class="btn-change decrement">-</span> <span>Blue: <span
-                        class="blue-value color-value">0</span></span>
+                <span class="btn-change decrement">-</span> 
+                <span><span class="blue-value color-value">0</span></span>
                 <span class="btn-change increment">+</span>
             </div>
             <div class="mobile-controls">
                 <span class="mobile-decrement decrement-mobile">-</span>
-                <input id="blue" type="range" max="255" min="0" value="0" oninput="changeColor()">
+                <label for="blue">Blue</label>
+                <input id="blue" type="range" name="slider" max="255" min="0" value="0" oninput="changeColor()">
                 <span class="mobile-decrement increment-mobile">+</span>
             </div>
             <div class="game-buttons">
