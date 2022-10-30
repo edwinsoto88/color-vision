@@ -120,46 +120,6 @@ h2 {
   padding: 32px;
 }
 
-/*
-.textbox {
-  position: absolute;
-  width: 90%;
-  color: white;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.textbox h1 {
-  font-size: 62px;
-}
-
-.textbox p {
-  margin: 10px 0 40px;
-  font-size: 14px;
-  color: white;
-}
-
-.testbutton {
-  display: inline-block;
-  text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  padding: 12px 34px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.testbutton:hover {
-  border: 1px solid white;
-  background: hotpink;
-}
-*/
-
 /*--- Our Vision ----*/
 .ContactUs {
   width: 80%;
@@ -201,80 +161,6 @@ p {
 .ContactCol:hover {
   box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
-
-/*----------Tests Page ----------*/
-/*
-.sub-header {
-  height: 50vh;
-  width: 100%;
-  background-image: linear-gradient(
-      rgba(245, 246, 252, 0.52),
-      rgba(117, 19, 93, 0.73)
-    ),
-    url(ColorBlind.jpg);
-  background-position: center;
-  background-size: cover;
-  text-align: center;
-  color: white;
-}
-
-.sub-header h1 {
-  margin-top: 100px;
-}
-
-.tests {
-  width: 100%;
-  margin: auto;
-  text-align: center;
-  padding-top: 50px;
-}
-
-.test-col {
-  flex-basis: 32%;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  position: relative;
-  overflow: hidden;
-  color: white;
-}
-
-.test-col img {
-  width: 100%;
-  display: block;
-}
-
-.layer {
-  background: transparent;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: 0.5s;
-}
-
-.layer:hover {
-  background: rgba(226, 0, 0, 0.7);
-}
-
-.layer h3 {
-  width: 100%;
-  font-weight: 500;
-  color: #fff;
-  font-size: 26px;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  opacity: 0;
-  transition: 0.5s;
-}
-
-.layer:hover h3 {
-  bottom: 49%;
-  opacity: 1;
-}
-*/
 
 /*----------Reaction Time Test ----------*/
 .clickable-area {
