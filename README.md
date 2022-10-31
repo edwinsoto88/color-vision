@@ -53,7 +53,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](/assets/images/ReadMe.PNG)
 
 The goal of this project is to create a web application to test vision and check if they have color blindness. This will be implemented through a web application where anyone with a link can access the surveys. Overall, this web application will provide people the ability to test for colorblindness and what type of color blindness they are if applicable. It will also allow users to upload a picture and change the color according to their specific color blindness.
 
@@ -61,8 +61,11 @@ The goal of this project is to create a web application to test vision and check
 
 ### Built With
 
-- [![HTML][]]
+- [![HTML]][HTML5-url]
+- [![CSS]][CSS3-url]
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
+- ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -150,5 +153,7 @@ Project Link: [https://github.com/edwinsoto88/color-vision](https://github.com/e
 [product-screenshot]: images/screenshot.png
 [react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [react-url]: https://reactjs.org/
+[HTML5-url]: https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white
+[CSS3-url]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [bootstrap-url]: https://getbootstrap.com
