@@ -82,7 +82,7 @@
         padding: 200px;
     }
 
-    .bn3637 {
+    .test-contents {
     display: inline-flex;
     align-items: center;
     padding: 0.7rem 2rem;
@@ -102,19 +102,5 @@
   }
   .bn36:hover {
     transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
-  }
-
-  .middle {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    font: 20px 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    backface-visibility: hidden;
-    border: 0.3rem solid transparent;
-    border-radius: 3rem;
   }
 
