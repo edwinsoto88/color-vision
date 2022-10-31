@@ -185,8 +185,7 @@ p {
 .nav-header{
   height: 50vh;
   width: 100%;
-  background-image:
-    linear-gradient(rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url(ColorBlind.jpg);
+  background-image: url(/assets/images/Gradient.png);
   background-position: center;
   background-size: cover;
   text-align: center;
