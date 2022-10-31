@@ -1,109 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
-    <title>Color Vision Website</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet"/>
-    <meta name="color-scheme" content="light" />
-  </head>
 
-  <body>
-    <section class="sub-header">
-      <nav>
-        <a href="index.html"> <img src="assets/images/Logo.png" /></a>
-        <div class="navlinks">
-          <ul>
-            <li>
-              <a href=""><i class="fa fa-fw fa-home"></i>Home</a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-fw fa-eye"></i>Our Vision</a>
-            </li>
-            <li>
-              <a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
-            </li>
-            <li>
-              <a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
-              <ul class="profile-drop">
-                <li><a href="login.html">Login</a></li>
-                <li><a href="signup.html">Registration</a></li>
-                <li><a href="">Settings</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <h1>Tests</h1>
-    </section>
-    <!-------- test content ---------->
+<head>
+  <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+  <title>Color Vision Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet" />
+  <meta name="color-scheme" content="light" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
 
-    <section class="tests">
-      <h1>See If You're Color Blind</h1>
-      <p>
-        Take these tests and see how if you fall under the spectrum of color
-        blindness.
-      </p>
+<body>
+  <section class="nav-header">
+    <nav>
+      <a href="index.html"> <img src="assets/images/Logo.png" /></a>
+      <div class="navlinks">
+        <ul>
+          <li>
+            <a href=""><i class="fa fa-fw fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href=""><i class="fa fa-fw fa-eye"></i>Our Vision</a>
+          </li>
+          <li>
+            <a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
+          </li>
+          <li>
+            <a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
+            <ul class="profile-drop">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Registration</a></li>
+              <li><a href="">Settings</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <h1>Tests Page</h1>
+  </section>
 
-      <div class="row">
-        <div class="test-col">
-          <img src="Timer.png" />
-          <div class="layer">
-            <h3>Cambridge Color Test</h3>
-          </div>
-        </div>
-        <div class="test-col">
-          <img src="Timer.png" />
-          <div class="layer">
-            <h3>Reaction Time Test</h3>
-          </div>
-        </div>
-        <div class="test-col">
-          <img src="Timer.png" />
-          <div class="layer">
-            <h3>Reaction Time Test</h3>
-          </div>
-        </div>
-        <div class="test-col">
-          <img src="Timer.png" />
-          <div class="layer">
-            <h3>Anomalascope Test</h3>
-          </div>
+  <!-------- test content ---------->
+  <section class="tests">
+    <h1>See If You're Color Blind</h1>
+    <p>
+      Take these tests and see how if you fall under the spectrum of color
+      blindness.
+    </p>
+
+    <div class="row">
+      <div class="test-col">
+        <img src="Timer.png" />
+        <div class="layer">
+          <h3>Cambridge Color Test</h3>
         </div>
       </div>
-    </section>
-
-    <section class="reaction-test-container">
-      <button id="open">Click To Start</button>
-      <div class="end-screen">
-        <div class="container">
-          <h1>Reaction Time Test</h1>
-          <div class="reaction-text"></div>
-          <button class="play-again-btn">Play Again</button>
-          <button id="close">Close Me</button>
+      <div class="test-col">
+        <img src="Timer.png" />
+        <div class="layer">
+          <h3>Reaction Time Test</h3>
         </div>
       </div>
-
-      <div class="main-menu active">
-        <div class="container">
-          <h1>Reaction Time Test</h1>
-          <p>Click as soon as you seen the color change.</p>
-          <p>Click anywhere to start</p>
-          <button id="close">Close Me</button>
+      <div class="test-col">
+        <img src="Timer.png" />
+        <div class="layer">
+          <h3>Reaction Time Test</h3>
         </div>
       </div>
-
-      <div class="clickable-area">
-        <div class="message">Click Now!</div>
+      <div class="test-col">
+        <img src="Timer.png" />
+        <div class="layer">
+          <h3>Anomalascope Test</h3>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <script src="assets/js/script.js"></script>
-  </body>
+  <section class="reaction-test-container">
+    <button id="open">Click To Start</button>
+    <div class="end-screen">
+      <div class="container">
+        <h1>Reaction Time Test</h1>
+        <div class="reaction-text"></div>
+        <button class="play-again-btn">Play Again</button>
+        <button id="close">Close Me</button>
+      </div>
+    </div>
+
+    <div class="main-menu">
+      <div class="container">
+        <h1>Reaction Time Test</h1>
+        <p>Click as soon as you seen the color change.</p>
+        <p>Click anywhere to start</p>
+        <button id="close">Close Me</button>
+      </div>
+    </div>
+
+    <div class="clickable-area">
+      <div class="message">Click Now!</div>
+    </div>
+  </section>
+
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
