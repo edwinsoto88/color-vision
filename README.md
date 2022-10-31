@@ -4,14 +4,13 @@
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/edwinsoto88/color-vision">
-    <img src="assets/New Logo.png" alt="Logo" width="480" height="160">
+    <img src="assets/images/Logo.png" alt="Logo" width="480" height="160">
   </a>
 
 <h3 align="center">Color Vision</h3>
@@ -107,6 +106,7 @@ List things you need to use the software and how to install them.
 - [x] Feature 4: Tests Page
 - [x] Feature 5: Cambridge Test
 - [x] Feature 6: Anomaliscope.html
+- [ ] Feature 7: Dark Mode
 
 See the [open issues](https://github.com/edwinsoto88/color-vision/issues) for a full list of proposed features (and known issues).
 
@@ -131,16 +131,6 @@ Rohit Kumar Shaw - [@rks0134](https://www.linkedin.com/in/rohitkrshaw/) - Rohit'
 Janie Reyna - [@](https://www.linkedin.com/in/jreyna-csengineer/) - Janie's LinkedIn
 
 Project Link: [https://github.com/edwinsoto88/color-vision](https://github.com/edwinsoto88/color-vision)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGMENTS -->
-
-## Acknowledgments
-
-- []()
-- []()
-- []()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
