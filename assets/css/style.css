@@ -11,7 +11,7 @@
 .header{
   min-height: 100vh;
   width: 100%;
-  background-image: url(/assets/images/Gradient.png);
+  background-image: url(Gradient.png);
   background-position: center;
   background-size: cover;
   position: relative;
