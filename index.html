@@ -22,9 +22,15 @@
           <li><a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a></li>
           <li><a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
             <ul class="profile-drop">
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signup.html">Registration</a></li>
-              <li><a href="">Settings</a></li>
+              <li class="nav-item">
+                <a id="userlink" class="nav-link" href="login.html">Username</a>
+              </li>
+              <li class="nav-item">
+                <a href="signup.html">Registration</a>
+              </li>
+              <li class="nav-item">
+                <a id="signoutlink" class="nav-link" href="">Sign Out</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -64,7 +70,60 @@
       </div>
     </div>
   </section>
+  <script>
+//-----------------------------References----------------------------------//
+    let userLink = document.getElementById('userLink');
+    let signoutlink = document.getElementById('singoutlink');
+    let header = document.getElementById('singoutlink');
+    var currentUser = null;
 
+//-----------------------------Functions-----------------------------------//
+    function getUsername(){
+      let keepLoggedIn = localStorage.getItem("keepLoggedIn");
+
+      if(keepLoggedIn == "yes"){
+        currentUser = JSON.parse(localStorage.getItem('user'));
+      }
+      else {
+        currentUser = JSON.parse(sessionStorage.getItem('user'));
+      }
+    }
+
+    function Signout() {
+      sessionStorage.removeItem('user');
+      localStorage.removeItem('user');
+      localStorage.removeItem('keepLoggedIn');
+      window.location = "index.html";
+    }
+
+//----------------------------Windows Loads -------------------------------//
+    window.onload = function(){
+      getUsername();
+      if(currentUser == null){
+        userLink.innerText = "Create New Account";
+        userLink.classList.replace("nav-link", "btn");
+        userLink.classList.add("btn-primary");
+        userLink.href = "signup.html";
+
+        userLink.innerText = "Login";
+        userLink.classList.replace("nav-link", "btn");
+        userLink.classList.add("btn-success");
+        userLink.href = "login.html";
+      }
+      else {
+        userLink.innerText = currentUser.username;
+        header.innerText = "welcome "+ currentUser.fullname;
+        userLink.classList.replace("nav-link", "btn");
+        userLink.classList.remove("btn-primary");
+        userLink.href = "#";
+
+        userLink.innerText = "SignOut";
+        userLink.classList.replace("btn", "nav-link");
+        userLink.classList.remove("btn-success");
+        userLink.href = "javascript:SignOut()";
+      }
+    }
+  </script>
 </body>
 
 </html>

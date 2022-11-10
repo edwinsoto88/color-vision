@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
-    <link rel="stylesheet" href="assets/css/login.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
-    <div class="center">
-      <div class="container">
-        <label for="show" class="close-btn fas fa-times" title="close"></label>
-        <div class="text">Login Form</div>
 
-        <form action="#">
-          <div class="data">
-            <label>Email or Phone</label>
-            <input type="text" required />
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="assets/css/login.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
 
-          <div class="data">
-            <label>Password</label>
-            <input type="password" required />
-          </div>
+<body>
+  <div class="center">
+    <div class="container">
+      <label for="show" class="close-btn fas fa-times" title="close"></label>
+      <div class="text">Login Form</div>
 
-          <div class="forgot-pass">
-            <a href="#">Forgot Password?</a>
-          </div>
+      <form action="#">
+        <div class="data">
+          <label>Email</label>
+          <input type="text" id="emailInp" required />
+        </div>
 
-          <div class="btn">
-            <div class="inner"></div>
-            <button type="submit">login</button>
-          </div>
+        <div class="data">
+          <label>Password</label>
+          <input type="password" id="passInp" required />
+        </div>
 
-          <div class="signup-link">
-            Not a member? <a href="#">Signup now</a>
-          </div>
-        </form>
-      </div>
+        <div class="forgot-pass">
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch">
+          <label class="custom-control-label" for="customSwitch">Keep me logged in</label>
+        </div>
+
+        <div class="btn">
+          <div class="inner"></div>
+          <button type="submit" id="submitInp">login</button>
+        </div>
+
+        <div class="signup-link">
+          Not a member? <a href="/signup.html">Signup now</a>
+        </div>
+      </form>
     </div>
-  </body>
+  </div>
+
+  <!------------------------------Fire Script Initialize --------------------------------->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyBVRCJN5CH0zJCWhzeI2ZLzALcsaDZSxRI",
+      authDomain: "colorvisionauth.firebaseapp.com",
+      projectId: "colorvisionauth",
+      storageBucket: "colorvisionauth.appspot.com",
+      messagingSenderId: "662384488497",
+      appId: "1:662384488497:web:63d218f90309276cdf6510",
+      measurementId: "G-M65WXKYJPR"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    import { getDatabase, ref, set, child, get, update, remove }
+      from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+
+    const db = getDatabase();
+
+    //----------------------------------Firescript References--------------------//
+    const email = document.getElementById('emailInp');
+    const passwd = document.getElementById('passInp');
+    const submit = document.getElementById('submitInp');
+
+    //----------------------------------Authentication Process---------------------------//
+    function AuthenticateUsr() {
+      const dbRef = ref(db);
+
+      get(child(dbRef, "UsersList/" + username.value)).then((snapshot) => {
+        if (snapshot.exists()) {
+          let dbpass = decPass(snapshot.val().passwd);
+          if (dbpass == passwd.value) {
+            login(snapshot.val());
+          }
+          else {
+            alert("User does not exist!");
+          }
+        }
+        else {
+          alert("Username or password is invalid!");
+        }
+      });
+    }
+
+    //--------------------------------------Decrytion-----------------------------------------//
+    function decryptPass(dbpass) {
+      var pass12 = CryptoJS.AES.decrypt(dbpass, passwd.value);
+      return pass12.toString(CryptoJS.enc.Utf8);
+    }
+
+    //-------------------------------------------LOGIN-----------------------------------------------//
+    function login(user) {
+      let keepLoggedIn = document.getElementById('customSwitch').checked;
+
+      if (!keepLoggedIn) {
+        sessionStorage.setItem('user', JSON.stringify(user));
+        window.location = "index.html";
+      }
+      else {
+        localStorage.setItem('keepLoggedIn', 'yes');
+        localStorage.setItem('user', JSON.stringify(user));
+        window.location = "index.html";
+      }
+    }
+    //---------------------Assign the events --------------------------------//
+    submit.addEventListener('click', AuthenticateUsr);
+
+  </script>
+</body>
+
 </html>

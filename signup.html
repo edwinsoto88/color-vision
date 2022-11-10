@@ -5,7 +5,10 @@
     <meta charset="UTF-8" />
     
     <link rel="stylesheet" href="assets/css/signup.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
   </head>
 
   <body>
@@ -16,54 +19,123 @@
           <div class="user-details">
             <div class="input-box">
               <span class="details">Full Name</span>
-              <input type="text" placeholder="Enter your name" required />
+              <input type="text" placeholder="Enter your name" id="nameInp"  required/>
             </div>
             <div class="input-box">
               <span class="details">Username</span>
-              <input type="text" placeholder="Enter your username" required />
+              <input type="text" placeholder="Enter your username" id="userInp"  required/>
             </div>
             <div class="input-box">
-              <span class="details">Email</span>
-              <input type="text" placeholder="Enter your email" required />
-            </div>
-            <div class="input-box">
-              <span class="details">Phone Number</span>
-              <input type="text" placeholder="Enter your number" required />
+              <span class="email-details">Email</span>
+              <input type="text" placeholder="Enter your email" id="emailInp"  required/>
             </div>
             <div class="input-box">
               <span class="details">Password</span>
-              <input type="text" placeholder="Enter your password" required />
-            </div>
-            <div class="input-box">
-              <span class="details">Confirm Password</span>
-              <input type="text" placeholder="Confirm your password" required />
+              <input type="password" placeholder="Enter your password" id="passInp"  required/>
             </div>
           </div>
-          <div class="gender-details">
-            <input type="radio" name="gender" id="dot-1" />
-            <input type="radio" name="gender" id="dot-2" />
-            <input type="radio" name="gender" id="dot-3" />
-            <span class="gender-title">Gender</span>
-            <div class="category">
-              <label for="dot-1">
-                <span class="dot one"></span>
-                <span class="gender">Male</span>
-              </label>
-              <label for="dot-2">
-                <span class="dot two"></span>
-                <span class="gender">Female</span>
-              </label>
-              <label for="dot-3">
-                <span class="dot three"></span>
-                <span class="gender">Prefer not to say</span>
-              </label>
-            </div>
-          </div>
-          <div class="button">
-            <input type="submit" value="Register" />
-          </div>
+          <button type="text" id="submitInp" class="btn btn-outline-primary mb-3">Sign Up</button>
+          <a href="login.html">Already have an Account?</a>
         </form>
       </div>
     </div>
-  </body>
+
+<!------------------------------Fire Script Initialize --------------------------------->
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBVRCJN5CH0zJCWhzeI2ZLzALcsaDZSxRI",
+        authDomain: "colorvisionauth.firebaseapp.com",
+        projectId: "colorvisionauth",
+        storageBucket: "colorvisionauth.appspot.com",
+        messagingSenderId: "662384488497",
+        appId: "1:662384488497:web:63d218f90309276cdf6510",
+        measurementId: "G-M65WXKYJPR"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      import { getDatabase, ref, set, child, get, update, remove}
+          from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
+
+      const db = getDatabase();
+
+//----------------------------------Firescript References--------------------//
+      const name = document.getElementById('nameInp');
+      const username = document.getElementById('userInp');
+      const email = document.getElementById('emailInp');
+      const passwd = document.getElementById('passInp');
+      const submit = document.getElementById('submitInp');    
+      
+//----------------------------------Firescript Validation--------------------//
+      function Validation(){
+        let nameregex = /^[a-zA-Z\s]+$/;
+        let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
+        let userregex = /^[a-zA-Z0-9]{5,}$/;
+
+        if(!nameregex.test(name.value)){
+          alert("The name should only contain alphabet letters!");
+          return false;
+        }
+
+        if(!emailregex.test(email.value)){
+          alert("Enter a valid email!");
+          return false;
+        }
+
+        if(!userregex.test(username.value)){
+          alert("Username can only be alphanumeric\n");
+          return false;
+        }
+
+        return true;
+      }
+
+
+//-----------------------Register user to Firebase -------------------//
+      function RegisterUser() {
+        if(!Validation()){
+          return;
+        };
+        const dbRef = ref(db);
+
+        get(child(dbRef, "UsersList/"+username.value)).then((snapshot)=>{
+          if(snapshot.exists()){
+            alert("Account Already Exists!");
+          }
+          else{
+            set(ref(db, "UsersList/"+username.value), 
+            {
+              fullname: name.value,
+              email: email.value,
+              username: username.value,
+              password: encrPass()
+            })
+            .then(()=>{
+              alert("User added successfully");
+            })
+            .catch(()=>{
+              alert("error"+error);
+            })
+          }
+        });
+      }
+
+//---------------------Encryption----------------------------------------//
+      function encrPass(){
+        var pass_12 = CryptoJS.AES.encrypt(passwd.value, passwd.value);
+        return pass_12.toString();
+      }      
+
+//---------------------Assign the events --------------------------------//
+      submit.addEventListener('click', RegisterUser);
+
+  </script>
+</body>
+
 </html>
