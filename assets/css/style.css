@@ -1,14 +1,14 @@
-:root{
+:root {
   color-scheme: light;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-.header{
+.header {
   min-height: 100vh;
   width: 100%;
   background-image: url(/assets/images/Gradient.png);
@@ -17,14 +17,14 @@
   position: relative;
 }
 
-nav{
+nav {
   display: flex;
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
 }
 
-nav img{
+nav img {
   width: 150px;
 }
 
@@ -40,23 +40,23 @@ nav img{
   position: relative;
 }
 
-.navlinks ul li a{
+.navlinks ul li a {
   color: white;
   text-decoration: none;
   font-size: 15px;
 }
 
-.navlinks ul li::after{
-  content: '';
+.navlinks ul li::after {
+  content: "";
   width: 0%;
   height: 2px;
   background: turquoise;
   display: block;
   margin: auto;
-  transition: 1.0s;
+  transition: 1s;
 }
 
-.navlinks ul li:hover::after{
+.navlinks ul li:hover::after {
   width: 100%;
   cursor: pointer;
 }
@@ -76,10 +76,13 @@ nav img{
 ul li ul:hover {
   visibility: visibile;
   opacity: 1;
-  display: block;
+  display: table;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
-  margin: 0;
   text-align: center;
+  font-size: 5px;
+  transition: 0.5s;
 }
 
 .navlinks ul li ul li {
@@ -87,10 +90,9 @@ ul li ul:hover {
   width: 100%;
   text-align: center;
   display: block;
-
 }
 
-.main-menu-textbox{
+.main-menu-textbox {
   position: absolute;
   width: 90%;
   color: white;
@@ -100,43 +102,43 @@ ul li ul:hover {
   text-align: center;
 }
 
-.main-menu-textbox h1{
+.main-menu-textbox h1 {
   font-size: 62px;
 }
 
-.main-menu-textbox p{
+.main-menu-textbox p {
   margin: 10px 0 40px;
   font-size: 14px;
   color: white;
 }
 
-.testbutton{
+.testbutton {
   display: inline-block;
   text-decoration: none;
   color: white;
   border: 1px solid white;
   padding: 12px 34px;
   font-size: 13px;
-  background: transparent; 
+  background: transparent;
   position: relative;
   cursor: pointer;
   transition: 1s;
 }
 
-.testbutton:hover{
+.testbutton:hover {
   border: 1px solid white;
   background: turquoise;
 }
 
 /*--- Our Vision ----*/
-.ContactUs{
+.ContactUs {
   width: 80%;
   margin: auto;
   text-align: center;
   padding-top: 100px;
 }
 
-h1{
+h1 {
   font-size: 36px;
   font-weight: 600;
   text-align: center;
@@ -155,12 +157,12 @@ p {
   text-align: center;
 }
 
-.row{
+.row {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
 }
-.ContactCol{
+.ContactCol {
   flex-basis: 31%;
   background: turquoise;
   border-radius: 10px;
@@ -170,19 +172,18 @@ p {
   transition: 0.5s;
 }
 
-.h3{
+.h3 {
   text-align: center;
   font-weight: 600;
   margin: 10px 0;
 }
 
-.ContactCol:hover{
-  box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+.ContactCol:hover {
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-
 /*----------Tests Page ----------*/
-.nav-header{
+.nav-header {
   height: 50vh;
   width: 100%;
   background-image: url(/assets/images/Gradient.png);
@@ -192,10 +193,10 @@ p {
   color: white;
 }
 
-.nav-header h1{
+.nav-header h1 {
   margin-top: 100px;
 }
-.layer{
+.layer {
   background: transparent;
   height: 100%;
   width: 100%;
@@ -205,8 +206,8 @@ p {
   transition: 0.5s;
 }
 
-.layer:hover{
-  background: rgba(226,0,0,0.7);
+.layer:hover {
+  background: rgba(226, 0, 0, 0.7);
 }
 
 .layer h3 {
@@ -228,137 +229,119 @@ p {
 }
 
 /*-----------Test Buttons---------------*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
-.container 
-{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 60px;
-	padding: 50px 0;
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px;
+  padding: 50px 0;
 }
-.container .box 
-{
-	position: relative;
-	width: 300px;
-	height: 350px;
-	background: #2e2e2e;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.container .box::before 
-{
-	content: '';
-	position: absolute;
-	border-top: 4px solid var(--clr);
-	border-bottom: 4px solid var(--clr);
-	inset: -10px 50px;
-	z-index: -2;
-	transform: skewY(15deg);
-	transition: 0.5s ease-in-out
+.container .box::before {
+  content: "";
+  position: absolute;
+  border-top: 4px solid var(--clr);
+  border-bottom: 4px solid var(--clr);
+  inset: -10px 50px;
+  z-index: -2;
+  transform: skewY(15deg);
+  transition: 0.5s ease-in-out;
 }
-.container .box:hover::before 
-{
-	transform: skew(0deg);
-	inset: -10px 40px;
+.container .box:hover::before {
+  transform: skew(0deg);
+  inset: -10px 40px;
 }
-.container .box::after 
-{
-	content: '';
-	position: absolute;
-	border-left: 4px solid var(--clr);
-	border-right: 4px solid var(--clr);
-	inset: 60px -10px;
-	z-index: -1;
-	transform: skew(15deg);
-	transition: 0.5s ease-in-out
+.container .box::after {
+  content: "";
+  position: absolute;
+  border-left: 4px solid var(--clr);
+  border-right: 4px solid var(--clr);
+  inset: 60px -10px;
+  z-index: -1;
+  transform: skew(15deg);
+  transition: 0.5s ease-in-out;
 }
-.container .box:hover::after 
-{
-	transform: skew(0deg);
-	inset: 40px -10px;
+.container .box:hover::after {
+  transform: skew(0deg);
+  inset: 40px -10px;
 }
 
-.container .box .content 
-{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	text-align: center;
-	gap: 20px;
-	padding: 0 20px;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
+.container .box .content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+  padding: 0 20px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
-.container .box .content .icon 
-{
-	color: var(--clr);
-	font-size: 2.5em;
-	width: 80px;
-	height: 80px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background: #2e2e2e;
-	color: var(--clr);
-	transition: 0.5s ease-in-out;
-	box-shadow: 0 0 0 4px #2e2e2e,
-	0 0 0 6px var(--clr);
+.container .box .content .icon {
+  color: var(--clr);
+  font-size: 2.5em;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2e2e2e;
+  color: var(--clr);
+  transition: 0.5s ease-in-out;
+  box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 6px var(--clr);
 }
-.container .box:hover .content .icon
-{
-	color : #2e2e2e;
-	background: var(--clr);
-	box-shadow: 0 0 0 4px #2e2e2e,
-	0 0 0 300px var(--clr);
+.container .box:hover .content .icon {
+  color: #2e2e2e;
+  background: var(--clr);
+  box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 300px var(--clr);
 }
-.container .box .content .text h3 
-{
-	font-size: 1.5em;
-	color: #fff;
-	font-weight: 500;
-	transition: 0.5s ease-in-out;
+.container .box .content .text h3 {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.5s ease-in-out;
 }
-.container .box:hover .content .text h3
-{
-	color: #2e2e2e;
+.container .box:hover .content .text h3 {
+  color: #2e2e2e;
 }
-.container .box .content .text p
-{
-	color: #777;
-	transition: 0.5s ease-in-out;
+.container .box .content .text p {
+  color: #777;
+  transition: 0.5s ease-in-out;
 }
-.container .box:hover .content .text p
-{
-	color: #333;
+.container .box:hover .content .text p {
+  color: #333;
 }
-.container .box .content .text a 
-{
-	position: relative;
-	background: var(--clr);
-	color: #2e2e2e;
-	padding: 8px 15px;
-	display: inline-block;
-	text-decoration: none;
-	font-weight: 500;
-	margin-top: 10px;
-	transition: 0.5s ease-in-out;
+.container .box .content .text a {
+  position: relative;
+  background: var(--clr);
+  color: #2e2e2e;
+  padding: 8px 15px;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  transition: 0.5s ease-in-out;
 }
-.container .box:hover .content .text a
-{
-	background: #2e2e2e;
-	color: var(--clr);
+.container .box:hover .content .text a {
+  background: #2e2e2e;
+  color: var(--clr);
 }
 
 /*----------Reaction Time Test ----------*/
-
 
 .clickable-area {
   height: 100vh;
@@ -372,7 +355,8 @@ p {
   color: #fff;
 }
 
-.end-screen, .main-menu {
+.end-screen,
+.main-menu {
   display: none;
   position: fixed;
   height: 100vh;
@@ -389,8 +373,6 @@ p {
 .end-screen.active {
   display: grid;
   place-items: center;
-
-
 }
 
 .main-menu {
