@@ -36,7 +36,6 @@
       </ul>
     </li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -58,6 +57,7 @@ The goal of this project is to create a web application to test vision and check
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 - [![Bootstrap][bootstrap.com]][bootstrap-url]
 - ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+- ![Firebase](https://img.shields.io/badge/firebase-ffca28?style=for-the-badge&logo=firebase&logoColor=black)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -74,16 +74,10 @@ The goal of this project is to create a web application to test vision and check
 - [x] Feature 5: Cambridge Test
 - [x] Feature 6: Anomaliscope.html
 - [ ] Feature 7: Dark Mode
+- [ ] Feature 8: Farmsworth 100 Hue Test
+- [ ] Feature 9: Share Feature
 
 See the [open issues](https://github.com/edwinsoto88/color-vision/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## License
-
-Distributed under the \_\_\_ License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
