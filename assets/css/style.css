@@ -355,8 +355,7 @@ p {
   color: #fff;
 }
 
-.end-screen,
-.main-menu {
+.end-screen, .main-menu {
   display: none;
   position: fixed;
   height: 100vh;
@@ -373,15 +372,29 @@ p {
 .end-screen.active {
   display: grid;
   place-items: center;
+
+
 }
 
 .main-menu {
   cursor: pointer;
 }
 
+.container {
+  max-width: 700px;
+  padding: 0 32px;
+}
+
 .main-menu h1 {
   font-size: 70px;
   margin: 8px 0;
+}
+
+.container p {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 800;
+  margin: 0;
 }
 
 .end-screen h1 {
