@@ -165,7 +165,7 @@ a {
 }
 
 .dark a {
-  color:turquoise;;
+  color:rgb(255, 255, 255);;
 }
 
 header {
@@ -375,7 +375,7 @@ footer {
 	border-bottom: 4px solid var(--clr);
 	inset: -10px 50px;
 	z-index: -2;
-	transform: skewY(15deg);
+	transform: skew(5deg);
 	transition: 0.5s ease-in-out
 }
 .container .box:hover::before 
@@ -391,7 +391,7 @@ footer {
 	border-right: 4px solid var(--clr);
 	inset: 60px -10px;
 	z-index: -1;
-	transform: skew(15deg);
+	transform: skew(5deg);
 	transition: 0.5s ease-in-out
 }
 .container .box:hover::after 
