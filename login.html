@@ -1,64 +1,55 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <!-- Somehow I got an error, so I comment the title, just uncomment to show -->
-    <link rel="stylesheet" href="assets/css/login.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="index.html"> <img src="/assets/images/Logo.png"></a>
-      <div class="navlinks">
-        <ul>
-          <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-          <li><a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
-            <ul class="tests-drop">
-              <li><a href="cambridge.html">Cambridge Color</a></li>
-              <li><a href="anomaliscope.html">Anomolascope</a></li>
-              <li><a href="">Farnsworth</a></li>
-              <li><a href="reactiontimetest.html">Reaction Time</a></li>
-            </ul>
-          </li>
-          <li><a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
-            <ul class="profile-drop">
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signup.html">Registration</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="center">
-      <div class="container">
-        <label for="show" class="close-btn fas fa-times" title="close"></label>
-        <div class="text">Login Form</div>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Login + Firebase Database</title>
+         <!-- Cool Google Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <!-- Our stylesheet -->
+        <link rel="stylesheet" type="text/css" href="login.css">
+    </head>
+    <body>
+        <section class="header">
+            <nav id="logo">
+              <a href="index.html"> <img src="assets/images/Logo.png"></a>
+            </nav>
+        </section>
+        <div id="content_container">
+            <div id="form_container">
+                <div id="form_header_container">
+                    <h2 id="form_header"> Login </h2>
+                </div>
 
-        <form action="#">
-          <div class="data">
-            <label>Email or Phone</label>
-            <input type="text" required />
-          </div>
+                <div id="form_content_container">
+                    <div id="form_content_inner_container">
+                        <input type="email" id="email" placeholder="Email"><br>
+                        <input type="password" id="password" placeholder="Password"><br>
 
-          <div class="data">
-            <label>Password</label>
-            <input type="password" required />
-          </div>
+                        <div id="button_container">
+                            <button onclick="login()">Login</button><br><br><br>
+                            <a href="register.html" class="badge badge-secondary py-1 w-100"> Want to create a new account?</a>
+                        </div>
 
-          <div class="forgot-pass">
-            <a href="#">Forgot Password?</a>
-          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
-          <div class="btn">
-            <div class="inner"></div>
-            <button type="submit">login</button>
-          </div>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
 
-          <div class="signup-link">
-            Not a member? <a href="signup.html">Signup now</a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
+    <!-- Our script must be loaded after firebase references -->
+    <script src="login.js"></script>
+
 </html>
