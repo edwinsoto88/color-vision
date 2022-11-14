@@ -1,201 +1,144 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-nav {
-  display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
-  align-items: center;
-}
+html, body {
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+#logo{ 
+	position:fixed; 
+	top:1ch; 
+	left:1ch; 
+}
 nav img {
-  width: 150px;
+    width: 150px;
 }
 
-.navlinks {
-  flex: 1;
-  text-align: right;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+#content_container {
+    width: 30%;
+    height: 44%;
 }
 
-.navlinks ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
+#form_container {
+    width: 100%;
+    height: 100%;
+
+    background-color: #370617;
+    box-shadow: 0 0 50px -20px #000;
+    border-radius: 2%;
+
+    overflow: hidden;
 }
 
-.navlinks ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 15px;
+#form_header_container {
+    width: 100%;
+    height: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    border-bottom: 1px solid transparent;
+    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 20;
+    background: #000;
 }
 
-.navlinks ul li::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: turquoise;
-  display: block;
-  margin: auto;
-  transition: 1s;
+#form_header {
+    display: inline-block;
+    font-size: 30px;
+    font-family: Bowlby One SC;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+
+    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 }
 
-.navlinks ul li:hover::after {
-  width: 100%;
-  cursor: pointer;
+#form_content_container {
+    width: 100%;
+    height: 90%;
+
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
 }
 
-.navlinks ul li ul {
-  display: none;
-  opacity: 1;
-  padding: 8px 12px;
-  position: relative;
-  transition: 0.5s;
-  margin: 0%;
-  visibility: visible;
-  text-align: center;
+#form_content_inner_container {
+    width: 75%;
+    height: 100%;
+
+    float: left;
+
 }
 
-.navlinks ul li:hover > ul,
-ul li ul:hover {
-  visibility: visibile;
-  opacity: 1;
-  display: table;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  text-align: center;
-  font-size: 5px;
-  transition: 0.5s;
+input {
+    width: 100%;
+    height: 40px;
+
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    background: #000;
+    font-family: Montserrat;
+    font-weight: 500;
+    color: #fff;
+    font-size: 15px;
+
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
 }
 
-.navlinks ul li ul li {
-  clear: both;
-  width: 100%;
-  text-align: center;
-  display: block;
+#button_container {
+    width: 100%;
+    height: 10%;
+
+    background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
+    color: #fff;
+
+    float: left;
+
+    margin-top: 5px;
 }
 
-body {
-  height: 100vh;
-  width: 100%;
-  background-image: url(/assets/images/Gradient.png);
-}
-.show-btn {
-  background: #fff;
-  padding: 10px 20px;
-  font-size: 20px;
-  font-weight: 500;
-  color: #3498db;
-  cursor: pointer;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-.show-btn,
-.container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+#button_container button {
+    width: 100%;
+    height: 100%;
+    float: left;
 
-.container {
-  display: block;
-  background: #fff;
-  width: 410px;
-  padding: 30px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
+    background: transparent;
+    color: inherit;
 
-.container .close-btn {
-  position: absolute;
-  right: 20px;
-  top: 15px;
-  font-size: 18px;
-  cursor: pointer;
-}
-.container .close-btn:hover {
-  color: #3498db;
-}
-.container .text {
-  font-size: 35px;
-  font-weight: 600;
-  text-align: center;
-}
-.container form {
-  margin-top: -20px;
-}
-.container form .data {
-  height: 45px;
-  width: 100%;
-  margin: 40px 0;
-}
-form .data label {
-  font-size: 18px;
-}
-form .data input {
-  height: 100%;
-  width: 100%;
-  padding-left: 10px;
-  font-size: 17px;
-  border: 1px solid silver;
-}
-form .data input:focus {
-  border-color: #3498db;
-  border-bottom-width: 2px;
-}
-form .forgot-pass {
-  margin-top: -8px;
-}
-form .forgot-pass a {
-  color: #3498db;
-  text-decoration: none;
-}
-form .forgot-pass a:hover {
-  text-decoration: underline;
-}
-form .btn {
-  margin: 30px 0;
-  height: 45px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-form .btn .inner {
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  z-index: -1;
-  background-image: url(/assets/images/Gradient.png);
-  transition: all 0.4s;
-}
-form .btn:hover .inner {
-  left: 0;
-}
-form .btn button {
-  height: 100%;
-  width: 100%;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-}
-form .signup-link {
-  text-align: center;
-}
-form .signup-link a {
-  color: #3498db;
-  text-decoration: none;
-}
-form .signup-link a:hover {
-  text-decoration: underline;
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
