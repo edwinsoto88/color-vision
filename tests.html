@@ -1,56 +1,56 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="with=device-width, initial-scale=1.0" />
+    <title>Color Vision Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet" />
+    <meta name="color-scheme" content="light" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<head>
-  <meta name="viewport" content="with=device-width, initial-scale=1.0" />
-  <title>Color Vision Website</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet" />
-  <meta name="color-scheme" content="light" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-  <section class="nav-header">
-    <nav>
-      <a href="index.html"> <img src="/assets/images/Logo.png"></a>
-      <div class="navlinks">
-        <ul>
-          <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
-          <li><a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
-            <ul class="tests-drop">
-              <li><a href="cambridge.html">Cambridge Color</a></li>
-              <li><a href="anomaliscope.html">Anomolascope</a></li>
-              <li><a href="">Farnsworth</a></li>
-              <li><a href="reactiontimetest.html">Reaction Time</a></li>
-            </ul>
-          </li>
-          <li><a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
-            <ul class="profile-drop">
-              <li><a href="login.html">Login</a></li>
-              <li><a href="signup.html">Registration</a></li>
-            </ul>
-          </li>
-        </ul>
+  </head>
+  <body>
+    <header>
+      <div class="switch">
+        <div class="flicker"></div>
+        <div class="moon"></div>
       </div>
-    </nav>
-    <h1>Tests Page</h1>
-  </section>
+    </header>
 
-  <!-------- test content ---------->
-  <section class="tests">
-    <h1>See If You're Color Blind</h1>
-    <p>
-      Take these tests and see how if you fall under the spectrum of color
-      blindness.
-    </p>
-  </section>
+    <section class="nav-header">
+      <nav>
+        <a href="index.html"> <img src="/assets/images/Logo.png"></a>
+        <div class="navlinks">
+          <ul>
+            <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+            <li><a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
+              <ul class="tests-drop">
+                <li><a href="cambridge.html">Cambridge Color</a></li>
+                <li><a href="anomaliscope.html">Anomolascope</a></li>
+                <li><a href="">Farnsworth</a></li>
+                <li><a href="reactiontimetest.html">Reaction Time</a></li>
+              </ul>
+            </li>
+            <li><a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
+              <ul class="profile-drop">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Registration</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <h1>Tests Page</h1>
+    </section>
+
+    
   
   <section>
     <div class="container">
-      <div class="box" style="--clr:#ffffff;">
+      <div class="box" style="--clr:rgb(255, 255, 255);">
         <div class="content">
           <div class="icon"><img src ="assets/images/cicon.png" style=width:86px;height:86px;"></ion-icon></div>
           <div class="text">
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="box" style="--clr:#ffffff;">
+      <div class="box" style="--clr:rgb(255, 255, 255);">
          <div class="content">
            <div class="icon"><img src ="assets/images/aicon.png" style=width:86px;height:86px;"></ion-icon></div>
            <div class="text">
@@ -68,7 +68,7 @@
            </div>
          </div>
        </div>
-       <div class="box" style="--clr:#ffffff;">
+       <div class="box" style="--clr:rgb(255, 255, 255);">
          <div class="content">
            <div class="icon"><img src ="assets/images/hicon.jpg" style=width:86px;height:86px;"></ion-icon></div>
            <div class="text">
@@ -77,7 +77,7 @@
            </div>
          </div>
        </div>
-       <div class="box" style="--clr:#ffffff;">
+       <div class="box" style="--clr:rgb(255, 255, 255);">
         <div class="content">
           <div class="icon"><img src ="assets/images/ricon.jpg" style=width:86px;height:86px;"></ion-icon></div>
           <div class="text">
@@ -88,6 +88,18 @@
       </div>
      </div>
   </section>
-</body>
+    </section>
 
+    <section class="main-text">
+      <!-------- test content ---------->
+     <h2>See If You're Color Blind</h2>
+   <p>
+     Take these tests and see if you fall under the spectrum of color
+     blindness.
+   </p>
+ </section>
+      
+
+    <script src="assets/js/dm.js"></script>
+  </body>
 </html>
