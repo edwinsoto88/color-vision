@@ -89,7 +89,7 @@ Edwin Soto-Villela - [@edwinsoto88](https://www.linkedin.com/in/edwin-soto-ville
 
 Rohit Kumar Shaw - [@rks0134](https://www.linkedin.com/in/rohitkrshaw/) - Rohit's LinkedIn
 
-Janie Reyna - [@](https://www.linkedin.com/in/jreyna-csengineer/) - Janie's LinkedIn
+Janie Reyna - [@janiereyna](https://www.linkedin.com/in/jreyna-csengineer/) - Janie's LinkedIn
 
 Project Link: [https://github.com/edwinsoto88/color-vision](https://github.com/edwinsoto88/color-vision)
 
