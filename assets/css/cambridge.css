@@ -1,106 +1,106 @@
-    nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-  }
-    nav img{
-    width: 150px;
-  }
-  
-    .navlinks {
-    background-color: rgb(255, 255, 255);
-    flex: 1;
-    text-align: right;
-  }
-  
-    .navlinks ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-  }
-  
-    .navlinks ul li a{
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 20px;
-  }
-  
-    .navlinks ul li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: turquoise;
-    display: block;
-    margin: auto;
-    transition: 1.0s;
-  }
-  
-    .navlinks ul li:hover::after{
-    width: 100%;
-    cursor: pointer;
-  }
-  
-    .navlinks ul li ul {
-    display: none;
-    opacity: 1;
-    padding: 8px 12px;
-    position: relative;
-    transition: 0.5s;
-    margin: 0%;
-    visibility: visible;
-    text-align: center;
-  }
-  
-    .navlinks ul li:hover > ul, 
-    ul li ul:hover {
-    visibility: visibile;
-    opacity: 1;
-    display: block;
-    position: absolute;
-    margin: 0;
-    text-align: center;
-  }
-  
-    .navlinks ul li ul li {
-    clear: both;
-    width: 100%;
-    text-align: center;
-    display: block;
-    }
+nav{
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+  nav img{
+  width: 150px;
+}
 
-    .bottom {
-      background-color: rgb(255, 254, 254);
-    }
-    section {
-        display: block
-    }
-    .top {
-        background-color: rgb(179, 177, 177);
-        text-align: center;
-        padding: 200px;
-    }
+  .navlinks {
+  background-color: rgb(255, 255, 255);
+  flex: 1;
+  text-align: right;
+}
 
-    .test-contents {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.7rem 2rem;
-    font: 20px 'Poppins', sans-serif;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    backface-visibility: hidden;
-    border: 0.3rem solid transparent;
-    border-radius: 3rem;
+  .navlinks ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+  .navlinks ul li a{
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+  .navlinks ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: turquoise;
+  display: block;
+  margin: auto;
+  transition: 1.0s;
+}
+
+  .navlinks ul li:hover::after{
+  width: 100%;
+  cursor: pointer;
+}
+
+  .navlinks ul li ul {
+  display: none;
+  opacity: 1;
+  padding: 8px 12px;
+  position: relative;
+  transition: 0.5s;
+  margin: 0%;
+  visibility: visible;
+  text-align: center;
+}
+
+  .navlinks ul li:hover > ul, 
+  ul li ul:hover {
+  visibility: visibile;
+  opacity: 1;
+  display: block;
+  position: absolute;
+  margin: 0;
+  text-align: center;
+}
+
+  .navlinks ul li ul li {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  display: block;
   }
 
-  .bn36 {
-    border-color: rgb(48, 47, 47);
-    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+  .bottom {
+    background-color: rgb(255, 254, 254);
   }
-  .bn36:hover {
-    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+  section {
+      display: block
   }
+  .top {
+      background-color: rgb(179, 177, 177);
+      text-align: center;
+      padding: 200px;
+  }
+
+  .test-contents {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  font: 20px 'Poppins', sans-serif;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+}
+
+.bn36 {
+  border-color: rgb(48, 47, 47);
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+.bn36:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
 
