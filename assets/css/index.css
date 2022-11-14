@@ -1,0 +1,415 @@
+  body{
+    background-color: rgb(211, 211, 211);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .header
+  {
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img{
+    width: 150px;
+  }
+  
+  .navlinks {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  .navlinks ul li a{
+    color: rgb(248, 248, 248);
+    text-shadow: 1px 1px 1px #000, 1px 2px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: turquoise;
+    display: block;
+    margin: auto;
+    transition: 1.0s;
+  }
+  
+  .navlinks ul li:hover::after{
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .navlinks ul li ul {
+    display: none;
+    opacity: 1;
+    padding: 8px 12px;
+    position: relative;
+    transition: 0.5s;
+    margin: 0%;
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .navlinks ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visibile;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .navlinks ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    display: block;
+  
+  }
+  
+  .main-menu-textbox{
+    position: absolute;
+    width: 90%;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 5px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .main-menu-textbox h1{
+    font-size: 65px;
+  }
+  
+  .main-menu-textbox p{
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-shadow: none;  }
+  
+  .testbutton{
+    display: inline-block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(242, 242, 242);
+    text-shadow: rgb(0, 0, 0) 3px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838246px 0px;    padding: 12px 34px;
+    font-size: 20px;
+    background: transparent; 
+    position: relative;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .testbutton:hover{
+    border: 1px solid white;
+    background: rgb(255, 255, 255);
+  }
+  
+  
+  h1{
+    font-size: 36px;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+  p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  
+  
+  /*----------Tests Page ----------*/
+  .nav-header{
+    height: 50vh;
+    width: 100%;
+    background-image: url(/assets/images/Gradient.png);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+  }
+  
+  .nav-header h1{
+    margin-top: 100px;
+  }
+  
+  
+  .tests{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  .test-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+  }
+  
+  .test-col img{
+    width: 100%;
+    display: block;
+  }
+  
+  .layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  .layer:hover{
+    background: rgba(226,0,0,0.7);
+  }
+  
+  .layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+  }
+  
+  /*----------Dark Mode ----------*/
+  
+  .dark p{
+    color:rgb(255, 255, 255);;
+  }
+
+  
+  header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px;
+  }
+  
+  .switch {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(39, 38, 38);
+    position: relative;
+  }
+  
+  .flicker {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    transition: 0.3s;
+    box-shadow: 
+      inset 4px 4px 4px rgb(255,255,255),
+      inset -4px -4px 4px rgb(195 193 198 / 90%);
+  }
+  
+  .dark {
+    background-color: rgb(57, 57, 57);
+    transition: 0.3s;
+  }
+  
+  .moon {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+    position: absolute;
+    top: 5px;
+    left: 45px;
+  }
+  
+  .dark .flicker {
+    transform: translateX(40px);
+  }
+  
+  .dark > * {
+   color:rgb(255, 255, 255);
+  }
+  
+  .main {
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+  
+  .main-text {
+    padding: 30px;
+    margin-bottom: 100px;
+    align-items: center;
+  }
+  
+  .main-text p
+  {
+   align-items: center;
+  }
+  
+  .square {
+    width: 98%;
+    margin: 1%;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  
+  .dark .square {
+    background-color: rgb(71, 71, 71);
+  }
+  
+  .cube {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-25deg) skew(25deg);
+  }
+  
+  .cube:before {
+    position: absolute;
+    content: "";
+    width: 21px;
+    height: 100%;
+    transform: skewY(-45deg);
+    left: -20px;
+    bottom: -10px;
+  }
+  
+  .cube:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 21px;
+    transform: skewX(-45deg);
+    left: -10px;
+    bottom: -20px;
+  }
+  
+  #javascript {
+    left: 450px;
+    bottom: 200px;
+    background-image: url("images/javascript-square.png");
+    background-size: cover;
+    background-color: rgb(119, 227, 186);
+    box-shadow: -40px 40px 20px rgb(50 50 50/ 15%);
+  }
+  
+  #javascript:before {
+    background-color: rgb(154, 221, 202);
+  }
+  
+  #javascript:after {
+    background-color: rgb(188, 221, 212);
+  }
+  
+  
+  #react {
+    left: 350px;
+    bottom: 40px;
+    background-image: url("images/react-square.png");
+    background-size: cover;
+    background-color: rgb(119, 193, 227);
+    box-shadow: -80px 80px 20px rgb(50 50 50/ 15%);
+  }
+  
+  #react:before {
+    background-color: rgb(154, 189, 221);
+  }
+  
+  #react:after {
+    background-color: rgb(188, 200, 221);
+  }
+  
+  footer {
+      display: flex;
+      justify-content: center;
+      padding: 100px 30px;
+      background-color:rgb(136, 136, 136);
+  }
+  
+  .dark footer {
+    background-color:rgb(28, 28, 28);
+  }
+  
+  @media only screen and (min-width: 970px) {
+    .main-text {
+      width: 100%;
+    }
+  
+    .square {
+      width: 48%;
+      margin: 1%;
+      height: 600px;
+    }
+  }
+  
+  @media only screen and (max-width: 1300px) {
+    .hero-image {
+      display: none;
+    }
+  }
+  
+  

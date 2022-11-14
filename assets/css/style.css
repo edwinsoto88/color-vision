@@ -97,6 +97,7 @@ ul li ul:hover {
   text-align: center;
 }
 
+
 h1 {
   font-size: 40px;
   font-weight: 600;
@@ -250,20 +251,6 @@ header {
   background-color: rgb(71, 71, 71);
 }
 
-
-.sub-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.hero-image {
-  position: relative;
-  width: 50%;
-  height: 350px;
-  display: block;
-  margin-bottom: 100px;
-}
-
 .cube {
   position: absolute;
   width: 80px;
@@ -289,40 +276,6 @@ header {
   transform: skewX(-45deg);
   left: -10px;
   bottom: -20px;
-}
-
-#html {
-  left: 100px;
-  bottom: 80px;
-  background-image: url("images/html-square.png");
-  background-size: cover;
-  background-color: rgb(175, 119, 227);
-  box-shadow: -60px 60px 20px rgb(50 50 50/ 15%);
-}
-
-#html:before {
-  background-color: rgb(189, 154, 221);
-}
-
-#html:after {
-  background-color: rgb(205, 188, 221);
-}
-
-#css {
-  left: 250px;
-  bottom: 240px;
-  background-image: url("images/css-square.png");
-  background-size: cover;
-  background-color: rgb(227, 119, 191);
-  box-shadow: -100px 100px 20px rgb(50 50 50/ 15%);
-}
-
-#css:before {
-  background-color: rgb(221, 154, 207);
-}
-
-#css:after {
-  background-color: rgb(221, 188, 211);
 }
 
 #javascript {
@@ -388,10 +341,6 @@ footer {
     display: none;
   }
 }
-
-
-/*-----------Test Buttons---------------*/
-@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
 
 /*-----------Test Buttons---------------*/
