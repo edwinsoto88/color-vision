@@ -73,8 +73,8 @@ The goal of this project is to create a web application to test vision and check
 - [x] Feature 4: Tests Page
 - [x] Feature 5: Cambridge Test
 - [x] Feature 6: Anomaliscope.html
-- [ ] Feature 7: Dark Mode
-- [ ] Feature 8: Farmsworth 100 Hue Test
+- [x] Feature 7: Dark Mode
+- [x] Feature 8: Farmsworth 100 Hue Test
 - [ ] Feature 9: Share Feature
 
 See the [open issues](https://github.com/edwinsoto88/color-vision/issues) for a full list of proposed features (and known issues).
