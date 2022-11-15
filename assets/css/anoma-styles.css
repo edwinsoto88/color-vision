@@ -42,6 +42,13 @@ nav {
   align-items: center;
 }
 
+<<<<<<< HEAD
+nav img {
+  width: 300px;
+}
+
+=======
+>>>>>>> c6bd96bf9d76b4c12ae653413dca41703d82a11f
 .navlinks {
   flex: 1;
   text-align: right;

@@ -9,89 +9,78 @@ html, body {
 } 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 a {
-    color:rgb(0, 0, 0);
-    font-size: 20px;
-    text-decoration: none;
-  }
 
-nav img {
-  width: 150px;
+  color:rgb(0, 0, 0);
+  font-size: 20px;
+  text-decoration: none;
 }
-
 nav {
-  display: flex;
-  padding: 2% 6%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navlinks {
-  flex: 1;
-  text-align: right;
-}
-.navlinks ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 8px 12px;
-  position: relative;
-}
-
-.navlinks ul li::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: turquoise;
-  display: block;
-  margin: auto;
-  transition: 1s;
-}
-
-.navlinks ul li ul {
-  display: none;
-  opacity: 1;
-  padding: 8px 12px;
-  position: relative;
-  transition: 0.5s;
-  margin: 0%;
-  visibility: visible;
-  text-align: center;
-}
-.navlinks ul li:hover::after {
-  width: 100%;
-  cursor: pointer;
-}
-
-.navlinks ul li ul {
-  display: none;
-  opacity: 1;
-  padding: 8px 12px;
-  position: relative;
-  transition: 0.5s;
-  margin: 0%;
-  visibility: visible;
-  text-align: center;
-}
-
-.navlinks ul li:hover > ul,
-ul li ul:hover {
-  visibility: visibile;
-  opacity: 1;
-  display: table;
-  left: 50%;
-  transform: translateX(-50%);
-  position: absolute;
-  text-align: center;
-  font-size: 5px;
-  transition: 0.5s;
-}
-
-.navlinks ul li ul li {
-  clear: both;
-  width: 100%;
-  text-align: center;
-  display: block;
-}
-
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img {
+    width: 150px;
+  }
+  
+  .navlinks {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  .navlinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: turquoise;
+    display: block;
+    margin: auto;
+    transition: 1s;
+  }
+  
+  .navlinks ul li:hover::after {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .navlinks ul li ul {
+    display: none;
+    opacity: 1;
+    padding: 8px 12px;
+    position: relative;
+    transition: 0.5s;
+    margin: 0%;
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .navlinks ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visibile;
+    opacity: 1;
+    display: table;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    text-align: center;
+    font-size: 5px;
+    transition: 0.5s;
+  }
+  
+  .navlinks ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
 #logo{ 
 	position:fixed; 
 	top:1ch; 
@@ -111,15 +100,14 @@ nav img {
 #content_container {
     width: 30%;
     height: 44%;
-    display: inline;
 }
 
 #form_container {
     width: 100%;
     height: 100%;
 
-    background-color: #370617;
-    box-shadow: 0 0 50px -20px #000;
+    background-color: #000000;
+    box-shadow: 0 0 50px -20px rgb(45, 44, 44);
     border-radius: 2%;
 
     overflow: hidden;
@@ -139,7 +127,7 @@ nav img {
     padding-top: 30px;
 
     border-bottom: 1px solid transparent;
-    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 20;
+    border-image: -webkit-linear-gradient(25deg,  #7a7a7a, #3c3c3c, #919191, #405b6a, turquoise) 20;
     background: #000;
 }
 
@@ -152,7 +140,7 @@ nav img {
     letter-spacing: 1px;
 
 
-    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    background: -webkit-linear-gradient(25deg,  #7a7a7a, #9e9d9d, #919191, #6a8a9c, turquoise);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
@@ -194,15 +182,15 @@ input {
     border-bottom: 2px solid transparent;
     border-top-left-radius: 2%;
     border-top-right-radius: 2%;
-    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+    border-image: -webkit-linear-gradient(25deg,  #7a7a7a, #9e9d9d, #919191, #6a8a9c, turquoise) 1;
 }
 
 #button_container {
     width: 100%;
     height: 10%;
 
-    background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
-    color: #fff;
+    background-image: linear-gradient(80deg,  #7a7a7a, #9e9d9d, #6a8a9c, turquoise);
+    color: rgb(0, 0, 0);
 
     float: left;
 

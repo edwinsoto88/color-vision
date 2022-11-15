@@ -1,3 +1,124 @@
+/*---Header and nav bar----*/
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #b1afff;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img {
+    width: 250px;
+  }
+  
+  .navlinks {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+  }
+  
+  .navlinks ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .navlinks ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: turquoise;
+    display: block;
+    margin: auto;
+    transition: 1s;
+  }
+  
+  .navlinks ul li:hover::after {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .navlinks ul li ul {
+    display: none;
+    opacity: 1;
+    padding: 8px 12px;
+    position: relative;
+    transition: 0.5s;
+    margin: 0%;
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .navlinks ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visibile;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .navlinks ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Raleway", sans-serif;
+    background-color: #d1d1d1;
+    font-size: 25px;
+    height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    padding: 32px;
+    text-transform: uppercase;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+  }
+  
+  h1::after,
+  h1::before {
+    display: flex;
+    flex: 1;
+    content: "";
+    height: 1px;
+    background: #222;
+    margin: 0 32px;
+  }
+  
+  p {
+    padding: 32px;
+  }
+
+
+  
+  /*---Header and nav bar----*/
 .collapse{display:none}
 .collapse.in{display:block}tr
 .collapse.in{display:table-row}tbody
@@ -116,7 +237,7 @@
     margin-top:20px;
     font-size:0;
     margin-bottom:
-    20px;
+    23px;
     text-align:center;
     padding-top:10px;
     padding-bottom:10px
@@ -228,5 +349,31 @@
     .mr-FM-83{background-color:#b3757a}
     .mr-FM-84{background-color:#b37576}
     .mr-FM-85{background-color:#b37673}
-
+    
+    .styled {
+        border: 0;
+        line-height: 1.5;
+        padding: 0 20px;
+        font-size: 1rem;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px 1px #000;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255);
+        background-image: linear-gradient(to top left,
+                                          rgba(0, 0, 0, .2),
+                                          rgba(0, 0, 0, .2) 30%,
+                                          rgba(0, 0, 0, 0));
+        box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                    inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+    
+    .styled:hover {
+        background-color: turquoise;
+    }
+    
+    .styled:active {
+        box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                    inset 2px 2px 3px rgba(0, 0, 0, .6);
+    }
     
