@@ -15,7 +15,7 @@ nav {
   }
   
   nav img {
-    width: 150px;
+    width: 300px;
   }
   
   .navlinks {
@@ -105,7 +105,7 @@ nav img {
     width: 100%;
     height: 100%;
 
-    background-color: #370617;
+    background-color: #000000;
     box-shadow: 0 0 50px -20px #000;
     border-radius: 2%;
 
@@ -126,7 +126,7 @@ nav img {
     padding-top: 30px;
 
     border-bottom: 1px solid transparent;
-    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 20;
+    border-image: -webkit-linear-gradient(25deg, #7a7a7a, #3c3c3c, #919191, #405b6a, turquoise) 20;
     background: #000;
 }
 
@@ -139,7 +139,7 @@ nav img {
     letter-spacing: 1px;
 
 
-    background: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF);
+    background: -webkit-linear-gradient(25deg,#7a7a7a, #3c3c3c, #919191, #405b6a, turquoise);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 }
@@ -181,14 +181,14 @@ input {
     border-bottom: 2px solid transparent;
     border-top-left-radius: 2%;
     border-top-right-radius: 2%;
-    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+    border-image: -webkit-linear-gradient(25deg, #7a7a7a, #3c3c3c, #919191, #405b6a, turquoise) 1;
 }
 
 #button_container {
     width: 100%;
     height: 10%;
 
-    background-image: linear-gradient(80deg, #FFBE0B, #FB5607, #FF006E, #8338EC);
+    background-image: linear-gradient(80deg, #7a7a7a, #919191, #405b6a, turquoise);
     color: #fff;
 
     float: left;

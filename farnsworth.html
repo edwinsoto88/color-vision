@@ -9,6 +9,29 @@
     <link rel="stylesheet" href="assets/css/farnsworth.css" type="text/css">
     
     <body>
+      <nav>
+        <a href="index.html"> <img src="/assets/images/Logo.png"></a>
+        <div class="navlinks">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+                <li><a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
+                    <ul class="tests-drop">
+                        <li><a href="ctest.html">Cambridge Color</a></li>
+                        <li><a href="anomaliscope.html">Anomolascope</a></li>
+                        <li><a href="farnsworth.html">Farnsworth</a></li>
+                        <li><a href="reactiontimetest.html">Reaction Time</a></li>
+                    </ul>
+                </li>
+                <li><a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
+                    <ul class="profile-drop">
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="signup.html">Registration</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </nav>
+
         <div class="background" >
         <div class="col-md-12" id="test_view">
         <div class="card contentbox">
@@ -45,28 +68,28 @@
         <div data-position="39" class="hue-box mr-FM-85"></div>
         </div>
         <div class="col-md-12 text-center mt-5">
-        <button class="btn btn-danger btn-lg" id="finish">
-        <i class="fa fa-crosshairs btn-loader"></i> CHECK YOUR SCORE</button>
+        <button class="favorite styled" id="finish">
+        <i class="button"></i> CHECK YOUR SCORE</button>
         <button class="btn btn-danger btn-lg" id="calculate" style="display: none;">Score My Test</button>
         </div>
         </div>
-        <div class="container hue-test-results collapse text-white">
-        <h2 class="text-white text-center">My Results</h2>
+        <div class="container hue-test-results collapse text-white"style="text-align: center;">
+        <h2 class="text-white text-center" style="text-align: center;">Results</h2>
         <div class="row">
         <div class="col-xs-12 col-sm-4">
         <div class="results-container">
         <canvas id="canvas" height="450" width="450"></canvas>
         </div>
         </div>
-        <div class="col-xs-12 col-sm-8 ">
+        <div class="col-xs-12 col-sm-8" >
         <h3 class="text-white">
         Your Test Score:
-        <span class="hue-score text-white"> </span>
+        <span class="hue-score text-white" > </span>
         </h3>
 
-        <p><strong>About your score: </strong>A lower score is better, with ZERO being a perfect score. The circle graph displays the regions of the color spectrum where your hue discrimination is low.
+        <p ><strong>About your score: </strong>A lower score is better, with ZERO being a perfect score. The circle graph displays the regions of the color spectrum where your hue discrimination is low.
         </p>
-        <a href="farnsworth.html"btn btn-primary">TRY AGAIN</a>
+        <a href="farnsworth.html"btn btn-primary>TRY AGAIN</a>
         </div>
         </div>
         </div>

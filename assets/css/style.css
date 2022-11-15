@@ -6,11 +6,11 @@ body {
   padding: 0;
   background-color: rgb(211, 211, 211);
   font-family: 'Poppins', sans-serif;
-  color:rgb(57, 57, 57);
+  color:rgb(0, 0, 0);
   text-align: center;
 }
 nav img {
-  width: 150px;
+  width: 300px;
 }
 
 nav {
@@ -102,6 +102,10 @@ h1 {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
+  width: 100%;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 5px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+
 }
 
 h2 {

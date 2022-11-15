@@ -6,20 +6,93 @@
     font-family: 'Poppins', sans-serif;
   }
   *{
-    margin: 0;
-    padding: 0;
+      margin: 0;
+      padding: 0;
+
     font-family: 'Poppins', sans-serif;
   }
   
   .header
   {
-    min-height: 100vh;
+    min-height: 85vh;
     width: 100%;
     background-position: center;
-    background-size: cover;
+    position: relative;
+  }
+   
+  nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav img{
+    width: 300px;
+  }
+  
+  .navlinks {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .navlinks ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
     position: relative;
   }
   
+  .navlinks ul li a{
+    color: rgb(248, 248, 248);
+    text-shadow: 1px 1px 1px #000, 1px 2px 1px #000, 1px 1px 1px #000, 1px 1px 1px #000;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  
+  .navlinks ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: turquoise;
+    display: block;
+    margin: auto;
+    transition: 1.0s;
+  }
+  
+  .navlinks ul li:hover::after{
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .navlinks ul li ul {
+    display: none;
+    opacity: 1;
+    padding: 8px 12px;
+    position: relative;
+    transition: 0.5s;
+    margin: 0%;
+    visibility: visible;
+    text-align: center;
+  }
+  
+  .navlinks ul li:hover > ul,
+  ul li ul:hover {
+    visibility: visibile;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .navlinks ul li ul li {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    display: block;
+  
+  }
   
   .main-menu-textbox{
     position: absolute;
@@ -67,20 +140,71 @@
     text-align: center;
   }
   
+  /*----------Our-Vision ----------*/
+  .Vision
+  {
+    min-height: 10vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+
+  .Goal
+  {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+  }
+ 
+  .container {
+    display: flex;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .item {
+    flex: auto 1 1;
+    padding: 50px;
+    border-radius: 15px;
+    background-size: 50px 10px, 60px 10px;
+    background-position: 20px 40px, 20px 60px;
+    background-repeat: no-repeat;
+  }
+    
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  h2{
+    position: absolute;
+    width: 90%;
+    color: #fff;
+    text-shadow: 1px 0 0 #000, 0 5px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
   h3 {
     text-align: center;
   }
   
   p {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
     text-align: center;
+    margin: 10px 0 40px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    text-shadow: none; 
   }
   
   .row{
-    margin-top: 5%;
+    margin-top: 8%;
     display: flex;
     justify-content: space-between;
   }
@@ -90,8 +214,6 @@
     font-weight: 600;
     margin: 10px 0;
   }
-  
-  
   
   /*----------Tests Page ----------*/
   .nav-header{
