@@ -1,160 +1,468 @@
-const computerCircle = document.querySelector(".computer-circle");
-const userCircle = document.querySelector(".user-circle");
-const btnMatch = document.getElementById("btn-match");
+var slider = document.getElementById("myRange");
+var output = document.getElementById("Hue");
+var Testszinek,
+  i = 0;
+Tesztszinek = [
+  [128, 191],
+  [191, 160],
+  [85, 212],
+  [213, 149],
+  [43, 233],
+  [234, 139],
+];
+szinek = [0, 0, 0, 0, 0, 0, 0];
+Elteres = [0, 0, 0, 0, 0, 0, 0];
+Eredmeny = [false, false, false, false, false, false, false];
 
-const red = document.getElementById("red");
-const green = document.getElementById("green");
-const blue = document.getElementById("blue");
+output.innerHTML = slider.value;
 
-const redValue = document.querySelector(".color-details .red-value");
-const greenValue = document.querySelector(".color-details .green-value");
-const blueValue = document.querySelector(".color-details .blue-value");
+slider.oninput = function () {
+  var Colordiv;
+  output.innerHTML = this.value;
+  Colordiv = "rgb(" + this.value + "," + this.value + ",0)";
+  document.getElementById("color-right").style.backgroundColor = Colordiv;
+};
 
-const decrement = document.querySelectorAll(".decrement");
-const increment = document.querySelectorAll(".increment");
-
-const decrementMobile = document.querySelectorAll(".decrement-mobile");
-const incrementMobile = document.querySelectorAll(".increment-mobile");
-
-const mobileColorInfo = document.querySelector(".mobile-colorinfo");
-
-const scoreText = document.querySelector(".score-text");
-
-const endGame = document.getElementById("btn-end-game");
-const colorToMatch = document.querySelector(".color-to-match");
-const resetBtn = document.getElementById("reset");
-
-
-// Initialize
-
-function init() {
-  let r = Math.floor(Math.random() * 255) + 1;
-  let g = Math.floor(Math.random() * 255) + 1;
-  let b = Math.floor(Math.random() * 255) + 1;
-
-  computerColor = "<span class='red-color'>Red: " + r + ",</span> <span class='green-color'>Green: " + g + ",</span> <span class='blue-color'>Blue: " + b + "</span>";
-
-  computerCircle.style.backgroundColor = "rgb(" + r + ", " + g + ", " + b + ")";
-
-  userCircle.style.backgroundColor = "rgb(0, 0, 0)";
-
-  btnMatch.style.pointerEvents = "auto";
-}
-
-init();
-
-// Decrement the color for Desktop Version
-
-for (let i = 0; i < decrement.length; i++) {
-  decrement[i].addEventListener("click", function (e) {
-    decrement[i].parentElement.nextSibling.nextSibling.firstElementChild.nextSibling.nextSibling.value -= 1;
-    changeColor();
-  })
-}
-
-// Decrement for Mobile Version
-
-for (let i = 0; i < decrementMobile.length; i++) {
-  decrementMobile[i].addEventListener("click", function (e) {
-    decrementMobile[i].nextSibling.nextSibling.value -= 1;
-    changeColor();
-  })
-}
-
-// Increment the color - desktop version
-
-for (let i = 0; i < increment.length; i++) {
-  increment[i].addEventListener("click", function (e) {
-    let slider = increment[i].parentElement.nextSibling.nextSibling.firstElementChild.nextSibling.nextSibling;
-    newValue = parseInt(slider.value) + 1;
-    slider.value = newValue;
-    changeColor();
-  })
-}
-
-// Increment for Mobile Version
-
-for (let i = 0; i < incrementMobile.length; i++) {
-  incrementMobile[i].addEventListener("click", function (e) {
-    newValue = parseInt(incrementMobile[i].previousSibling.previousSibling.value) + 1;
-    incrementMobile[i].previousSibling.previousSibling.value = newValue;
-    changeColor();
-  })
-}
-
-function decrementColor(color) {
-  return color - 1;
-}
-
-// Change the user Color
-
-function changeColor() {
-  userCircle.style.backgroundColor = "rgb(" + red.value + ", " + green.value + ", " + blue.value + ")";
-  redValue.innerHTML = red.value;
-  greenValue.innerHTML = green.value;
-  blueValue.innerHTML = blue.value;
-  mobileColorInfo.innerHTML = "Red: " + red.value + ", Green: " + green.value + ", Blue: " + blue.value;
-}
-
-// Click handler for Match Button
-
-btnMatch.addEventListener("click", function () {
-  let userColor = userCircle.style.backgroundColor;
-  let computerColor = computerCircle.style.backgroundColor;
-
-  let rgbColorUser =
-    userColor.substring(userColor.indexOf('(') + 1, userColor.lastIndexOf(')')).split(/,\s*/);
-  let rgbColorComputer = computerColor.substring(computerColor.indexOf('(') + 1, computerColor.lastIndexOf(')')).split(/,\s*/);
-
-  console.log(rgbColorUser);
-  console.log(rgbColorComputer);
-
-  calculateScore(rgbColorUser, rgbColorComputer);
-
-})
-
-// Calculate the Score
-
-function calculateScore(userColor, PCColor) {
-
-  if (isNaN(parseInt(userColor[0]))) {
-    userColor = [0, 0, 0];
-    let score = calculateDifference(userColor, PCColor);
-    scoreText.innerHTML = "You are off by " + score;
+function kiertekel1() {
+  var text;
+  if (i == 6) {
+    document.getElementById("p1").innerHTML = "<b>ANOMALOSCOPE</b><br>1/7";
   } else {
+    document.getElementById("p1").innerHTML =
+      "<b>ANOMALOSCOPE</b><br>" + (i + 2) + "/7";
+  }
+  document.getElementById("p2").innerHTML = i + 1 + "/7 - match.";
+  Eredmeny[i] = true;
+  szinek[i] = parseInt(output.innerHTML);
+  tCiklus();
+}
+function kiertekel2() {
+  var text;
+  if (i == 6) {
+    document.getElementById("p1").innerHTML = "<b>ANOMALOSCOPE</b><br>1/7";
+  } else {
+    document.getElementById("p1").innerHTML =
+      "<b>ANOMALOSCOPE</b><br>" + (i + 2) + "/7";
+  }
+  document.getElementById("p2").innerHTML = i + 1 + "/7 - no match possible.";
+  Eredmeny[i] = false;
+  tCiklus();
+}
 
-    calculateDifference(userColor, PCColor);
-    let score = calculateDifference(userColor, PCColor);
-    if (score <= 40) {
-      scoreText.innerHTML = "Colors Match!";
-    } else {
-      scoreText.innerHTML = "You are off by " + score;
+function tCiklus() {
+  var Colordiv;
+  if (i == 6) {
+    i = -1;
+    Colordiv = "rgb(170,170,0)";
+  }
+  if (i == -1) {
+    Colordiv = "rgb(170,170,0)";
+    Vege();
+  }
+  if (i != -1) {
+    Colordiv = "rgb(" + Tesztszinek[i] + ",0)";
+  }
+  document.getElementById("color-left").style.backgroundColor = Colordiv;
+  i = i + 1;
+}
+
+function Vege() {
+  var vegeredmeny = ["", "", "", "", "", "", ""];
+  var diagnozis;
+  var j = 0;
+  if (Eredmeny[0]) {
+    j = j + 1;
+    Elteres[0] = Math.pow(
+      Math.pow(170 - parseInt(output.innerHTML), 2) +
+        Math.pow(170 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+  if (Eredmeny[1]) {
+    j = j + 1;
+    Elteres[1] = Math.pow(
+      Math.pow(128 - parseInt(output.innerHTML), 2) +
+        Math.pow(191 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+  if (Eredmeny[2]) {
+    j = j + 1;
+    Elteres[2] = Math.pow(
+      Math.pow(191 - parseInt(output.innerHTML), 2) +
+        Math.pow(160 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+  if (Eredmeny[3]) {
+    j = j + 1;
+    Elteres[3] = Math.pow(
+      Math.pow(85 - parseInt(output.innerHTML), 2) +
+        Math.pow(212 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+  if (Eredmeny[4]) {
+    j = j + 1;
+    Elteres[4] = Math.pow(
+      Math.pow(213 - parseInt(output.innerHTML), 2) +
+        Math.pow(149 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+  if (Eredmeny[5]) {
+    j = j + 1;
+    Elteres[5] = Math.pow(
+      Math.pow(43 - parseInt(output.innerHTML), 2) +
+        Math.pow(233 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+  if (Eredmeny[6]) {
+    j = j + 1;
+    Elteres[6] = Math.pow(
+      Math.pow(234 - parseInt(output.innerHTML), 2) +
+        Math.pow(139 - parseInt(output.innerHTML), 2),
+      0.5
+    );
+  }
+
+  if (
+    Eredmeny[0] &
+    (Eredmeny[1] == false) &
+    (Eredmeny[2] == false) &
+    (Eredmeny[3] == false) &
+    (Eredmeny[4] == false) &
+    (Eredmeny[5] == false) &
+    (Eredmeny[6] == false) &
+    (Elteres[0] < 10)
+  ) {
+    diagnozis = "<b>Normal color vision<br>";
+  } else {
+    if ((j == 1) & (Elteres[0] > 9)) {
+      diagnozis =
+        "<b>DIAGNOSIS: Color vision deficiency. The color match is too far in case of the first reference color.<br>";
+    }
+    if (j == 0) {
+      diagnozis =
+        "<b>No diagnosis. Inconsistent result. Try again! There is at least one match is possible.<br>";
+    }
+    if (j == 2) {
+      diagnozis = "<b>DIAGNOSIS: Mild color vision deficiency<br>";
+    }
+    if (j == 3) {
+      diagnozis = "<b>DIAGNOSIS: Medium red-green color vision deficiency<br>";
+    }
+    if (j == 4) {
+      diagnozis = "<b>DIAGNOSIS: Medium red-green color vision deficiency<br>";
+    }
+    if (j == 5) {
+      diagnozis = "<b>DIAGNOSIS: Severe red-green color vision deficiency<br>";
+    }
+    if (j == 6) {
+      diagnozis = "<b>DIAGNOSIS: Severe red-green color vision deficiency<br>";
+    }
+    if (j == 7) {
+      diagnozis = "<b>DIAGNOSIS: Severe red-green color vision deficiency<br>";
     }
   }
+  if (Eredmeny[0]) {
+    vegeredmeny[0] =
+      "1/7 match, difference from the reference color: " +
+      parseInt(Elteres[0]) +
+      "<br>";
+  } else {
+    vegeredmeny[0] = "1/7 no match possible<br>";
+  }
+  if (Eredmeny[1]) {
+    vegeredmeny[1] =
+      "2/7 match, difference from the reference color: " +
+      parseInt(Elteres[1]) +
+      "<br>";
+  } else {
+    vegeredmeny[1] = "2/7 no match possible<br>";
+  }
+  if (Eredmeny[2]) {
+    vegeredmeny[2] =
+      "3/7 match, difference from the reference color: " +
+      parseInt(Elteres[2]) +
+      "<br>";
+  } else {
+    vegeredmeny[2] = "3/7 no match possible<br>";
+  }
+  if (Eredmeny[3]) {
+    vegeredmeny[3] =
+      "4/7 match, difference from the reference color: " +
+      parseInt(Elteres[3]) +
+      "<br>";
+  } else {
+    vegeredmeny[3] = "4/7 no match possible<br>";
+  }
+  if (Eredmeny[4]) {
+    vegeredmeny[4] =
+      "5/7 match, difference from the reference color: " +
+      parseInt(Elteres[4]) +
+      "<br>";
+  } else {
+    vegeredmeny[4] = "5/7 no match possible<br>";
+  }
+  if (Eredmeny[5]) {
+    vegeredmeny[5] =
+      "6/7 match, difference from the reference color: " +
+      parseInt(Elteres[5]) +
+      "<br>";
+  } else {
+    vegeredmeny[5] = "6/7 no match possible<br>";
+  }
+  if (Eredmeny[6]) {
+    vegeredmeny[6] =
+      "7/7 match, difference from the reference color: " +
+      parseInt(Elteres[6]) +
+      "<br>";
+  } else {
+    vegeredmeny[6] = "7/7 no match possible<br>";
+  }
+
+  document.getElementById("p2").innerHTML =
+    diagnozis +
+    "</b><br>" +
+    vegeredmeny[0] +
+    vegeredmeny[1] +
+    vegeredmeny[2] +
+    vegeredmeny[3] +
+    vegeredmeny[4] +
+    vegeredmeny[5] +
+    vegeredmeny[6];
+
+  Rajzol1();
 }
 
-// Calculate the difference
+window.onload = function Rajzol() {
+  var c = document.getElementById("myCanvas");
+  var ctx1 = c.getContext("2d");
+  var img = document.getElementById("scale");
+  img.style.display = "none";
+  ctx1.drawImage(img, 0, 0);
+  ctx1.stroke();
+};
 
-function calculateDifference(userColor, PCColor) {
-  let rScore = Math.abs(parseInt(PCColor[0] - parseInt(userColor[0])));
-  let gScore = Math.abs(parseInt(PCColor[1] - parseInt(userColor[1])));
-  let bScore = Math.abs(parseInt(PCColor[2] - parseInt(userColor[2])));
+function Rajzol1() {
+  var c = document.getElementById("myCanvas");
+  var ctx1 = c.getContext("2d");
+  var img = document.getElementById("scale");
+  img.style.display = "none";
+  elipx = 0;
+  elipy = 0;
+  tan = 1;
 
-  return parseInt(rScore) + parseInt(gScore) + parseInt(bScore);
+  ctx1.drawImage(img, 0, 0);
+  ctx1.fillStyle = "red";
+
+  if (Eredmeny[0]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[0], 697 - 2.56 * szinek[0], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+  if (Eredmeny[1]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[1], 697 - 2.56 * szinek[1], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+  if (Eredmeny[2]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[2], 697 - 2.56 * szinek[2], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+  if (Eredmeny[3]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[3], 697 - 2.56 * szinek[3], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+  if (Eredmeny[4]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[4], 697 - 2.56 * szinek[4], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+  if (Eredmeny[5]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[5], 697 - 2.56 * szinek[5], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+  if (Eredmeny[6]) {
+    ctx1.beginPath();
+    ctx1.arc(43 + 2.56 * szinek[6], 697 - 2.56 * szinek[6], 5, 0, 2 * Math.PI);
+    ctx1.fill();
+    ctx1.stroke();
+  }
+
+  ctx1.strokeStyle = "Black";
+  ctx1.lineWidth = 1;
+  if (Eredmeny[0]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[0], 697 - 2.56 * szinek[0]);
+    ctx1.lineTo(478, 262);
+    ctx1.stroke();
+  }
+  if (Eredmeny[1]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[1], 697 - 2.56 * szinek[1]);
+    ctx1.lineTo(371, 208);
+    ctx1.stroke();
+  }
+  if (Eredmeny[2]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[2], 697 - 2.56 * szinek[2]);
+    ctx1.lineTo(532, 287);
+    ctx1.stroke();
+  }
+  if (Eredmeny[3]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[3], 697 - 2.56 * szinek[3]);
+    ctx1.lineTo(261, 154);
+    ctx1.stroke();
+  }
+  if (Eredmeny[4]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[4], 697 - 2.56 * szinek[4]);
+    ctx1.lineTo(588, 316);
+    ctx1.stroke();
+  }
+  if (Eredmeny[5]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[5], 697 - 2.56 * szinek[5]);
+    ctx1.lineTo(153, 101);
+    ctx1.stroke();
+  }
+  if (Eredmeny[6]) {
+    ctx1.beginPath();
+    ctx1.moveTo(43 + 2.56 * szinek[6], 697 - 2.56 * szinek[6]);
+    ctx1.lineTo(642, 341);
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[0]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[0] + 478);
+    elipy = 0.5 * (697 - 2.56 * szinek[0] + 262);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[0],
+      Elteres[0] / 2,
+      -Math.atan(1),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[1]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[1] + 371);
+    elipy = 0.5 * (697 - 2.56 * szinek[1] + 208);
+    tan = (43 + 2.56 * szinek[1] - 371) / (697 - 2.56 * szinek[1] - 208);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[1],
+      Elteres[1] / 2,
+      -(Math.atan(tan) - Math.PI / 2),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[2]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[2] + 532);
+    elipy = 0.5 * (697 - 2.56 * szinek[2] + 287);
+    tan = (43 + 2.56 * szinek[2] - 532) / (697 - 2.56 * szinek[2] - 287);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[2],
+      Elteres[2] / 2,
+      -(Math.atan(tan) - Math.PI / 2),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[3]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[3] + 261);
+    elipy = 0.5 * (697 - 2.56 * szinek[3] + 154);
+    tan = (43 + 2.56 * szinek[3] - 261) / (697 - 2.56 * szinek[3] - 154);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[3],
+      Elteres[3] / 2,
+      -(Math.atan(tan) - Math.PI / 2),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[4]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[4] + 588);
+    elipy = 0.5 * (697 - 2.56 * szinek[4] + 316);
+    tan = (43 + 2.56 * szinek[4] - 588) / (697 - 2.56 * szinek[4] - 316);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[4],
+      Elteres[4] / 2,
+      -(Math.atan(tan) - Math.PI / 2),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[5]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[5] + 153);
+    elipy = 0.5 * (697 - 2.56 * szinek[5] + 101);
+    tan = (43 + 2.56 * szinek[5] - 153) / (697 - 2.56 * szinek[5] - 101);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[5],
+      Elteres[5] / 2,
+      -(Math.atan(tan) - Math.PI / 2),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  if (Eredmeny[6]) {
+    ctx1.beginPath();
+    elipx = 0.5 * (43 + 2.56 * szinek[6] + 642);
+    elipy = 0.5 * (697 - 2.56 * szinek[6] + 341);
+    tan = (43 + 2.56 * szinek[6] - 642) / (697 - 2.56 * szinek[6] - 341);
+    ctx1.ellipse(
+      elipx,
+      elipy,
+      1.5 * Elteres[6],
+      Elteres[6] / 2,
+      -(Math.atan(tan) - Math.PI / 2),
+      0,
+      2 * Math.PI
+    );
+    ctx1.stroke();
+  }
+
+  alert("THE TEST IS END! Diagnosis below.");
 }
-
-// Show the original colors (Cheat)
-
-endGame.addEventListener("click", function () {
-  colorToMatch.style.visibility = "visible";
-  colorToMatch.innerHTML = computerColor;
-  endGame.classList.add("cheated");
-  btnMatch.style.pointerEvents = "none";
-  scoreText.innerHTML = "Press the Reset Button to start a new game";
-})
-
-
-// Reset the game
-resetBtn.addEventListener("click", function () {
-  location.reload();
-})
