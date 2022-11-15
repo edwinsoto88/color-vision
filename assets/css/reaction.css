@@ -1,7 +1,7 @@
 /*----------Reaction Time Test ----------*/
 
 .clickable-area {
-    height: 100vh;
+    height: 66vh;
     width: 100%;
     cursor: pointer;
     background: limegreen;
@@ -15,9 +15,9 @@
   .end-screen, .main-menu {
     display: none;
     position: fixed;
-    height: 100vh;
+    height: 70vh;
     width: 100%;
-    top: 0;
+    top: 20vh;
     left: 0;
     background: #0d3b66;
     color: #fff;
@@ -29,8 +29,7 @@
   .end-screen.active {
     display: grid;
     place-items: center;
-  
-  
+
   }
   
   .main-menu {
@@ -38,7 +37,7 @@
   }
   
   .container {
-    max-width: 700px;
+    max-width: 650px;
     padding: 0 32px;
   }
   

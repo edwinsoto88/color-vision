@@ -4,15 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="with=device-width, initial-scale=1.0" />
     <title>Reaction Time Test</title>
-    <link rel="stylesheet" href="assets/css/reaction.css" />
+    <link rel="stylesheet" href="assets/css/reaction.css"/>
+    <link rel="stylesheet" href="assets/css/nav.css"/>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet"/>
     <meta name="color-scheme" content="light" />
-
+    <nav>
+      <a href="index.html"> <img src="/assets/images/Logo.png"></a>
+      <div class="navlinks">
+        <ul>
+          <li><a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a></li>
+          <li><a href="tests.html"><i class="fa fa-fw fa-check"></i>Tests</a>
+            <ul class="tests-drop">
+              <li><a href="ctest.html">Cambridge Color</a></li>
+              <li><a href="anomaliscope.html">Anomolascope</a></li>
+              <li><a href="farnsworth.html">Farnsworth</a></li>
+              <li><a href="reactiontimetest.html">Reaction Time</a></li>
+            </ul>
+          </li>
+          <li><a href=""><i class="fa fa-fw fa-user"></i>Profile</a>
+            <ul class="profile-drop">
+              <li><a href="login.html">Login</a></li>
+              <li><a href="signup.html">Registration</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <section class="reaction-test-container">
-      <button id="open">Click To Start</button>
       <div class="end-screen">
         <div class="container">
           <h1>Reaction Time Test</h1>

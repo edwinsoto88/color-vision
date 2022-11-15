@@ -24,17 +24,22 @@ nav {
   padding: 2% 6%;
   justify-content: space-between;
   align-items: center;
+  z-index: 99;
 }
 
 .navlinks {
   flex: 1;
   text-align: right;
+  z-index: 99;
+
 }
 .navlinks ul li {
   list-style: none;
   display: inline-block;
   padding: 8px 12px;
   position: relative;
+  z-index: 99;
+
 }
 
 .navlinks ul li::after {
@@ -45,6 +50,8 @@ nav {
   display: block;
   margin: auto;
   transition: 1s;
+  z-index: 99;
+
 }
 
 .navlinks ul li ul {
@@ -56,10 +63,14 @@ nav {
   margin: 0%;
   visibility: visible;
   text-align: center;
+  z-index: 99;
+
 }
 .navlinks ul li:hover::after {
   width: 100%;
   cursor: pointer;
+  z-index: 99;
+
 }
 
 .navlinks ul li ul {
@@ -70,6 +81,7 @@ nav {
   transition: 0.5s;
   margin: 0%;
   visibility: visible;
+  z-index: 99;
   text-align: center;
 }
 
@@ -84,6 +96,8 @@ ul li ul:hover {
   text-align: center;
   font-size: 5px;
   transition: 0.5s;
+  z-index: 99;
+
 }
 
 .navlinks ul li ul li {
@@ -91,6 +105,7 @@ ul li ul:hover {
   width: 100%;
   text-align: center;
   display: block;
+  z-index: 99;
 }
 
 
