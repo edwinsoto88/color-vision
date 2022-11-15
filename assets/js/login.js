@@ -96,8 +96,9 @@ const firebaseConfig = {
       // Push to Firebase Database
       database_ref.child('users/' + user.uid).update(user_data)
   
-      // DOne
+      // Done
       alert('User Logged In!!')
+      window.location.href = "index.html";
   
     })
     .catch(function(error) {
@@ -108,9 +109,6 @@ const firebaseConfig = {
       alert(error_message)
     })
   }
-  
-  
-  
   
   // Validate Functions
   function validate_email(email) {
@@ -144,3 +142,4 @@ const firebaseConfig = {
       return true
     }
   }
+
