@@ -37,24 +37,37 @@
         </div>
     </nav>
 
-    <h1>Anomolascope Test</h1>
     <div class="main-area">
-        <div class="test-area" style="background-color: RGB(240, 240, 240);">
-            <div id="color-left" style="background-color: rgb(170, 170, 0); width: 140px; height: 280px; margin-right: 50px;"></div>
-            <div id="color-right" style="background-color: rgb(255, 255, 0); width: 140px; height: 280px;"></div>
+        <div class="test-area" style="background-color: RGB(240,240,240)">
+
+            <p id="p1"><b>ANOMALOSCOPE</b><br>2/7</p>
+            <div id="color-left"
+                style="background-color: rgb(128, 191, 0); width: 140px; height: 280px; margin-right: 50px;">
+            </div>
+            <div id="color-right" style="background-color: rgb(99, 99, 0); width: 140px; height: 280px;"></div>
+
             <p id="p"><br></p>
 
             <div class="slidecontainer" style="display:block">
                 <input type="range" min="99" max="255" value="99" class="slider" style="width:715px" id="myRange">
-                <p style="display: none">Hue: <span id="Hue">255</span></p>
+                <p style="display: none">Hue: <span id="Hue">99</span></p>
             </div>
+
             <p id="p1"><br></p>
-            <button id="MATCH" class="button" onclick="kiertekel1()">MATCH</button>
-            <button id="MATCH" class="button" onclick="kiertekel1()">No MATCH</button>
+            <button id="MATCH" class="button" onclick="buttonMatch()">MATCH</button>
+            <button id="NOMATCH" class="button" onclick="buttonNoMatch()">NO MATCH POSSIBLE</button>
             <p id="p1"><br></p>
+
+        </div>
+
+        <div class="test-area" style="background-color: RGB(240,240,240)">
+            <p id="p2">1/7 - match.</p>
+            <img id="scale" width="740" height="740" align="left" src="https://www.color-blind-test.com/images/anomaloscope/anomaloscope-scale.jpg" style="display: none;">
+            <canvas id="myCanvas" width="740" height="740" style="border: 0px solid #d3d3d3;"> </canvas>
         </div>
     </div>
-    <script src="assets/js/anoma-main.js"></script>
+
+    <script type="text/javascript" src="/assets/js/anoma-main.js"></script>
 </body>
 
 </html>
