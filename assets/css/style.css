@@ -8,6 +8,8 @@ body {
   font-family: 'Poppins', sans-serif;
   color:rgb(0, 0, 0);
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 nav img {
   width: 300px;
@@ -478,7 +480,7 @@ footer {
 	margin-top: 10px;
 	transition: 0.5s ease-in-out;
 }
-.container .box:hover .content .text a
+.container .box:hover .content .text button
 {
 	background: #2e2e2e;
 	color: var(--clr);
