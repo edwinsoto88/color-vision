@@ -114,7 +114,9 @@ h2 {
   font-size: 40px;
   font-weight: 600;
   text-align: center;
-  margin: 0;
+  width: 100%;
+  color: #fff;
+  text-shadow: 1px 0 0 #000, 0 5px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
 
 .main-menu-textbox p {
@@ -484,4 +486,8 @@ footer {
 {
 	background: #2e2e2e;
 	color: var(--clr);
+}
+
+html{
+  scroll-behavior: smooth;
 }
