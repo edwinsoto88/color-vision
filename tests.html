@@ -72,7 +72,7 @@
           </div>
           <div class="text">
             <h3>Cambridge Test</h3>
-            <a href="#" id="open">Start Test</button></a>
+            <button class="btn" data-target="#modal1">Start Test</button>
           </div>
         </div>
       </div>
@@ -83,7 +83,7 @@
           </div>
           <div class="text">
             <h3>Anomaloscope Test</h3>
-            <a href="#" id="openanoma">Start Test</button></a>
+            <button class="btn" data-target="#modal2">Start Test</button>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
           </div>
           <div class="text">
             <h3>Farnsworth 100-Hue Test</h3>
-            <a href="farnsworth.html">Start Test</a>
+            <button class="btn" data-target="#modal3">Start Test</button>
           </div>
         </div>
       </div>
@@ -105,11 +105,53 @@
           </div>
           <div class="text">
             <h3>Reaction Time Test</h3>
-            <a href="reactiontimetest.html">Start Test</a>
+            <button class="btn" data-target="#modal4">Start Test</button>
           </div>
         </div>
       </div>
     </div>
+
+    <div class="modal" id="modal1">
+      <div class="header">
+        <div class="title">Cambrdige Color Test</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        The test consists of colored plates and contains a circle of dots appearing randomized in color and size. Within the pattern are dots, which form a number, difficult to see with a red-green color blindness.
+      </div>
+    </div>
+
+    <div class="modal" id="modal2">
+      <div class="header">
+        <div class="title">Anomolacope Test</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        The test is to match fundamental colors red and green. a very simple red-green color blindness test. Just try to match the two colors you see in the boxes. You can get a match using the slider below the box. If you get a match, press <em>Match!</em> and if you can't match them use the <em>No Match Possible
+      </div>
+    </div>
+
+    <div class="modal" id="modal3">
+      <div class="header">
+        <div class="title">Farnsworth Test</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        Arrange the colors in the correct order, starting from the reference color. This is the online version of the D-15 test, which Farnsworth introduced in 1947. On mobile, the test is not optimal. Use on PC or tablet.
+      </div>
+    </div>
+
+    <div class="modal" id="modal4">
+      <div class="header">
+        <div class="title">Reaction Time Test</div>
+        <button class="btn close-modal">&times;</button>
+      </div>
+      <div class="body">
+        The Reaction Test was developed as a fun way to identify color changes on the screen. The test shows one color at a time(red, green, yellow) and prompts user to click on the screen when they see the color change.    
+      </div>
+  
+
+
     <script src="assets/js/test-descriptions.js"></script>
     <!-------- dark mode script: ---------->
       <script src="assets/js/dm.js"></script>
