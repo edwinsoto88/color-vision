@@ -71,7 +71,7 @@ nav {
 
 .navlinks ul li:hover > ul,
 ul li ul:hover {
-  visibility: visibile;
+  visibility: visible;
   opacity: 1;
   display: table;
   left: 50%;
