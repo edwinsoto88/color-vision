@@ -1,4 +1,4 @@
-.modal-container{    
+/*.modal-container{    
     background-color: gray;
    display: flex;
    align-items: center;
@@ -56,7 +56,7 @@ button{
 
 }
 
-
+*/
 .btn {
     padding: 0.5rem 1rem;
     border: 1px solid #ccc;
@@ -74,7 +74,7 @@ button{
     border: none;
     font-size: 1.5rem;
   }
-  
+ 
   .modal {
     width: 450px;
     position: fixed;
@@ -86,6 +86,7 @@ button{
     border-radius: 10px;
     z-index: 2;
     background-color: #fff;
+    text-align: center;
   }
   
   .modal.active {
@@ -99,12 +100,28 @@ button{
     border-bottom: 1px solid #ccc;
     padding: 0.5rem;
     background-color: rgba(0, 0, 0, 0.05);
+    text-align: center;
   }
-  
   .modal .body {
     padding: 0.75rem;
   }
   
+  .modal .start{
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+    
+  }
+
+  .start:hover{
+    color: white;
+    border: #2e2e2e;
+    background:#2e2e2e;
+    
+  }
+
   #overlay {
     display: none;
     position: fixed;
