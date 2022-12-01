@@ -3,8 +3,13 @@ a {
     color:rgb(0, 0, 0);
     font-size: 20px;
     text-decoration: none;
-    
   }
+
+  
+  .dark a {
+    color:rgb(255, 255, 255);;
+  }
+  
 
 body {
   transition: 0.3s;
